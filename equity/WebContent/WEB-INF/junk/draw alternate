@@ -1,0 +1,25 @@
+<!-- 
+<s:if test="1==1">
+<s:set var="tmp1" value='0' />
+<s:set var="tmp2" value="0" />
+<s:iterator id="model.newData" value="model.newData" status="element" var="current">
+	<script>
+	drawLine(<s:property value="#tmp1" />,<s:property value="#tmp2" />,<s:property value="close" />,<s:property value="model.size" />);
+	</script>
+	<s:set var="tmp2" value="%{close}" />	
+	<s:set var="tmp1" value="%{#element.index}" />
+</s:iterator>
+</s:if>
+<s:else>
+<s:iterator id="model.newData" value="model.newData" status="element" var="current">
+	<s:set var="tmp1" value="%{#element.index}" />
+	<s:set var="tmp2" value="%{high}" />
+	<s:set var="tmp2" value="%{low}" />
+	<s:set var="tmp2" value="%{open}" />
+	<s:set var="tmp2" value="%{close}" />
+	<script>
+	drawCandle(<s:property value="#tmp1" />,<s:property value="#tmp2" />,<s:property value="high" />,<s:property value="low" />,<s:property value="open" />,<s:property value="close" />,<s:property value="model.size" />);
+	</script>
+</s:iterator>
+</s:else>
+ -->

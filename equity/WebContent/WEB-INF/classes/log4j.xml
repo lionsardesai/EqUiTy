@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+<!-- 
+
+Conversion characters are:
+
+    %m: Outputs your message.
+    %p: Outputs the priority of the logging event.
+    %r: Outputs the number of milliseconds elapsed since the start of the application until the creation of the logging event.
+    %c: Outputs the category of the logging event. Example: For the category name "a.b.c", the pattern %c{2} will output "b.c". {2} means "output last two components of the dot-separated category name". If no {n} is there, full Category name is output by default.
+    %t: Outputs the name of the thread that generated the logging event.
+    %x: Outputs the nested diagnostic context (NDC) associated with the thread that generated the logging event. Useful when multiple clients are handled by separate threads such as in Java servlets.
+    %n: Outputs the platform-dependent newline character(s). Preferable to specifying "\n" or "\r\n" etc.
+    %%: Outputs a single percent sign.
+    WARNING: The patterns below will slow down the execution of your program somewhat. Avoid unless execution speed is not an issue.
+    %d: Outputs the date of the logging event. The date conversion specifier may be followed by a date format specifier enclosed between braces. Example: %d{HH:mm:ss,SSS} or %d{dd MMM yyyy HH:mm:ss,SSS}. If no date format specifier is given then ISO8601 format is assumed. The date format specifier admits the same syntax as the time pattern string of Java's SimpleDateFormat which is slow. For faster performance, use %d{ISO8601}, %d{ABSOLUTE}, %d{RELATIVE} (millisecs since program start, fastest) or %d{DATE} which use log4j's ISO8601DateFormat, AbsoluteTimeDateFormat, RelativeTimeDateFormat and DateTimeDateFormat date formatters respectively.
+    %l: Outputs source code location information. Shortcut for %C.%M(%F:%L).
+    %C: Outputs the fully-qualified class name of the caller issuing the logging request. Example: For the class name "org.apache.xyz.SomeClass", the pattern %C{1} will output "SomeClass". {1} means "output last one component of the fully-qualified class name". If no {n} is there, full class name is output by default.
+    %M: Outputs the method name where the logging request was issued.
+    %F: Outputs the file name where the logging request was issued.
+    %L: Outputs the line number from where the logging request was issued. 
+
+
+http://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/PatternLayout.html
+
+ -->
+	<appender name="infoFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/home/shardul/Desktop/equity project/logs/info.log" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd" />
+        <!-- skipping append with datepattern fails to log anything -->
+        <param name="append" value="true" />
+        <param name="Threshold" value="INFO" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{dd MMM yyyy HH:mm:ss,SSS} %-5p %M(%F:%L) - %m%n"/>
+        </layout>
+    </appender>
+    <appender name="rootInfoFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/home/shardul/Desktop/equity project/logs/rootinfo.log" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd" />
+        <!-- skipping append with datepattern fails to log anything -->
+        <param name="append" value="true" />
+        <param name="Threshold" value="INFO" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{dd MMM yyyy HH:mm:ss,SSS} %-5p %M(%F:%L) - %m%n"/>
+        </layout>
+    </appender>
+    <appender name="warnFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/home/shardul/Desktop/equity project/logs/warn.log" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd" />
+        <!-- skipping append with datepattern fails to log anything -->
+        <param name="append" value="true" />
+        <param name="Threshold" value="WARN" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <!-- <param name="ConversionPattern" value="%-5p %t [%-40.40c] %x - %m%n"/> -->
+            <param name="ConversionPattern" value="%d{dd MMM yyyy HH:mm:ss,SSS} %-5p %M(%F:%L) - %m%n"/>
+        </layout>
+    </appender> 
+    <appender name="rootWarnFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/home/shardul/Desktop/equity project/logs/rootwarn.log" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd" />
+        <!-- skipping append with datepattern fails to log anything -->
+        <param name="append" value="true" />
+        <param name="Threshold" value="WARN" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <!-- <param name="ConversionPattern" value="%-5p %t [%-40.40c] %x - %m%n"/> -->
+            <param name="ConversionPattern" value="%d{dd MMM yyyy HH:mm:ss,SSS} %-5p %M(%F:%L) - %m%n"/>
+        </layout>
+    </appender> 
+    <appender name="errorFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/home/shardul/Desktop/equity project/logs/error.log" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd" />
+        <!-- skipping append with datepattern fails to log anything -->
+        <param name="append" value="true" />
+        <param name="Threshold" value="ERROR" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p %t [%-40.40c] %x - %m%n"/>
+            <param name="ConversionPattern" value="%d{dd MMM yyyy HH:mm:ss,SSS} %-5p %M(%F:%L) - %m%n"/>
+        </layout>
+    </appender>
+	<appender name="rootErrorFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/home/shardul/Desktop/equity project/logs/rooterror.log" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd" />
+        <!-- skipping append with datepattern fails to log anything -->
+        <param name="append" value="true" />
+        <param name="Threshold" value="ERROR" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p %t [%-40.40c] %x - %m%n"/>
+            <param name="ConversionPattern" value="%d{dd MMM yyyy HH:mm:ss,SSS} %-5p %M(%F:%L) - %m%n"/>
+        </layout>
+    </appender>
+	<appender name="debugFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/home/shardul/Desktop/equity project/logs/debug.log" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd" />
+        <!-- skipping append with datepattern fails to log anything -->
+        <param name="append" value="true" />
+        <param name="Threshold" value="DEBUG" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p %t [%-40.40c] %x - %m%n"/>
+            <param name="ConversionPattern" value="%d{dd MMM yyyy HH:mm:ss,SSS} %-5p %M(%F:%L) - %m%n"/>
+        </layout>
+    </appender>
+	<appender name="rootDebugFile" class="org.apache.log4j.DailyRollingFileAppender">
+        <param name="File" value="/home/shardul/Desktop/equity project/logs/rootdebug.log" />
+        <param name="DatePattern" value="'.'yyyy-MM-dd" />
+        <!-- skipping append with datepattern fails to log anything -->
+        <param name="append" value="true" />
+        <param name="Threshold" value="DEBUG" />
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%-5p %t [%-40.40c] %x - %m%n"/>
+            <param name="ConversionPattern" value="%d{dd MMM yyyy HH:mm:ss,SSS} %-5p %M(%F:%L) - %m%n"/>
+        </layout>
+    </appender>
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Threshold" value="DEBUG" />
+		<layout class="org.apache.log4j.PatternLayout">
+	<!-- 		<param name="ConversionPattern" value="%-4r [%t] %-5p %c %x - %m%n" />
+		 -->
+		 <param name="ConversionPattern" value="%-5p %M(%F:%L) - %m%n" />
+		</layout>
+	</appender>
+	<logger name="com.lionsardesai">
+        <appender-ref ref="debugFile"/>
+        <appender-ref ref="infoFile"/>
+        <appender-ref ref="warnFile"/>
+        <appender-ref ref="errorFile"/>
+        <appender-ref ref="console"/>
+    </logger>
+	<root>
+		<appender-ref ref="rootDebugFile"/>
+		<appender-ref ref="rootInfoFile"/>
+		<appender-ref ref="rootWarnFile"/>
+		<appender-ref ref="rootErrorFile"/>
+	</root>
+</log4j:configuration>
