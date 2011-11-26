@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans>
+<bean id="WelcomeListBean" class="com.lionsardesai.beans.WelcomeListBean">
+<property name="id" value="GOOG"></property>
+</bean>
+<bean id="WelcomeAction" class="com.lionsardesai.action.WelcomeAction" >
+<property name="model" ref="WelcomeListBean" />
+</bean>
+</beans>
