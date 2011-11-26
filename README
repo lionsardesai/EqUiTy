@@ -1,0 +1,41 @@
+Back end										
+									Framework 	Struts 2+			
+data acquisition							with jsp viewer			
+									ibatis for db interaction			
+download from yahoo finance any missing data before today		Tomcat for deployment(explore weblogic here)
+flexibility to change datasource required				mysql as sql client				
+										
+										
+data formats										
+										
+currently only csv. But xml expected in future										
+currently site sources later direct input may be available										
+										
+										
+Site Functions										
+										
+New functions should be allowed later. All functions displayed in headers as tabs and using same code										
+Site available in multiple locales										
+										
+Basic independent charting						News			
+	bars						News fetching services			
+	lines						google search api to begin with			
+	candles						wiki api for wiki news			
+							investopedia api for investopedia related query			
+Basic Technical analysis including										
+	Volume charts									
+	RSI									
+	Money Flow									
+	W%R									
+	stochastic		Fast + slow							
+	moving averages 	multiple time periods							
+	MACD									
+	ROC									
+	Bolinger bands									
+	Parabolic SAR									
+										
+Portfolio								Predict				
+registered members can make a portfolio			Use data to predict one day changes				
+							allow long and short type of exchanges				
+							limited to stock but extendible				
+
