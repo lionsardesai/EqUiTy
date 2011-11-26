@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap 
+PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap>
+<!--- Showing data by ID -->
+ <resultMap id="result" class="com.lionsardesai.beans.FakeBean">
+  <result property="id" column="id"/>
+  <result property="open" column="open"/>
+  <result property="close" column="close"/>
+</resultMap>
+<resultMap id="record" class="com.lionsardesai.beans.RAWDataBean">
+  <result property="id" column="id"/>
+  <result property="open" column="open"/>
+  <result property="close" column="close"/>
+  <result property="high" column="high"/>
+  <result property="low" column="low"/>
+  <result property="date" column="date"/>
+  <result property="volume" column="volume"/>
+  <result property="adjClose" column="adjclose"/>
+</resultMap>
+<select id="getopenclose" resultMap="result">
+   select * from RAW where id='GOOG'
+</select>
+<select id="getRecords" resultMap="record">
+   select date, id, open, close, high, low, volume, adjClose from RAW where id=#id#;
+</select>
+<insert id="storetest" parameterClass="com.lionsardesai.beans.FakeBean">
+	insert into RAW(id, open, close) values(#id#, #open#, #close#)
+</insert>
+<insert id="writeRecords" parameterClass="com.lionsardesai.beans.RAWDataBean">
+	insert into RAW(date, id, open, close, high, low, volume, adjclose, divident) values(#date#, #id#, #open#, #close#, #high#, #low#, #volume#, #adjClose#, #divident#)
+</insert>
+<select id="uptodate" resultClass="java.util.Date">
+	select Max(date) from RAW;
+</select>
+</sqlMap>

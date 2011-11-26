@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- 
+<struts-config>
+	<global-exceptions>
+		<exception key="errors.msg" type="java.lang.Exception" path="/WEB-INF/pages/common/errors/unClassifiedExceptionError.jsp"/>
+		<exception key="errors.msg" type="java.lang.UnClassifiedException" path="/WEB-INF/pages/common/errors/unClassifiedExceptionError.jsp"/>
+	</global-exceptions>
+	
+</struts-config>
+ -->
+<struts>    
+    <constant name="struts.custom.i18n.resources" value="global" />
+    <constant name="struts.devMode" value="true" />
+	
+	<package name="common" namespace="/" extends="struts-default">
+	    <default-action-ref name="welcome" />
+		<action name="welcome" class="com.lionsardesai.action.WelcomeAction">
+			<result name="SUCCESS">/WEB-INF/pages/common/welcome2.jsp</result>
+		</action>
+		
+	</package>
+	
+	<package name="chart" namespace="/chart" extends="struts-default">
+		<action name="chart" class="com.lionsardesai.action.ChartAction">
+			<result name="SUCCESS">/WEB-INF/pages/chart/chart.jsp</result>
+		</action>
+	</package>
+<!-- 	
+	<package name="predictor" namespace="/predictor" extends="struts-default">
+		<action name="chart" class="com.lionsardesai.action.PredictorAction">
+			<result name="SUCCESS">/WEB-INF/pages/predictor/predictor.jsp</result>
+		</action>
+	</package>
+ -->
+ 	<package name="default" namespace="/" extends="struts-default">
+ 		<action name="locale" class="com.lionsardesai.common.LocaleAction">
+			<result type="redirect" name="SUCCESS">welcome.action</result>
+		</action>
+		<action name="getlogo">
+			<result>/WEB-INF/images/logo.png</result>
+		</action>
+		<action name="getbanner">
+			<result>/WEB-INF/images/banner.png</result>
+		</action>
+		<action name="getgraphbase">
+			<result>/WEB-INF/images/graphbasic.png</result>
+		</action>
+		<action name="getWelcomeBanner">
+			<result>/WEB-INF/images/welcome.jpg</result>
+		</action>
+	</package>
+</struts>
