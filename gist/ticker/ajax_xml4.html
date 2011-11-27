@@ -1,0 +1,34 @@
+<body>  
+<script src="http://www.blastcasta.com/feed-to-json.aspx?feedurl=http://feeds.bbci.co.uk/news/business/rss.xml&param=data"></script>
+<!--<script>alert(data.rss.channel[0].item[0].title)</script>-->
+<script src="jQuery.js"></script>  
+  <script src="jQuery.rollChildren.js"></script>  
+  <script>  
+      $(document).ready(function() {  
+          $('#test').rollchildren({  
+                delay_time : 3000,  
+                loop : true,  
+                pause_on_mouseover : true,  
+                roll_up_old_item : true,  
+                speed: 'slow',     
+          });  
+      });  
+  </script>  
+  <div>  
+        <div id='test'>
+           
+           <!-- <li><script>document.write(data.rss.channel[0].item.length)</script>  </li>
+            <li><script>document.write(data.rss.channel[0].item[0].title)</script>  </li>
+            <li><script>document.write(data.rss.channel[0].item[1].title)</script></li> -->
+                        
+        </div>  
+        <script>
+        var main_div = document.getElementById("test");
+        for(i=0;i < data.rss.channel[0].item.length;i++) {
+            main_div.innerHTML += "<div id=" + i + ">" + data.rss.channel[0].item[i].title + "<a href="+ data.rss.channel[0].item[i].link + ">[know more]</a></div>";
+            
+        }         
+        </script>
+        
+    </div>  
+</body>
