@@ -16,11 +16,27 @@
 <!-- <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>-->
 <script type="text/javascript" src="../js/jquery-ui-1.8.16.custom.min.js"></script>
 <!--<script type=text/javascript src="http://www.magic-rss.com/magic_js.cgi?z=32159&f=y"></script>-->
+<script src="http://www.blastcasta.com/feed-to-json.aspx?feedurl=http://feeds.bbci.co.uk/news/business/rss.xml&param=data"></script>
+<script src="../js/jQuery.rollChildren.js"></script>  
 <script type="text/javascript">
 			$(function(){
 
+				var main_div = document.getElementById("news");
+		        for(i=0;i < data.rss.channel[0].item.length;i++) {
+		            main_div.innerHTML += "<div id=" + i + ">" + data.rss.channel[0].item[i].title + "<a href="+ data.rss.channel[0].item[i].link + ">[know more]</a></div>";
+		            
+		        }
+		        
 				// Tabs
 				$('#tabs').tabs();
+				
+				$('#news').rollchildren({  
+	                delay_time : 3000,  
+	                loop : true,  
+	                pause_on_mouseover : true,  
+	                roll_up_old_item : true,  
+	                speed: 'slow',     
+	          });
 	
 			});
 </script>
@@ -46,7 +62,7 @@
 <!-- end common images div -->
 </div>
 <div id="ticker">tickers</div>
-<div id="news">news</div>
+<div id="news"></div>
 <!-- end common header here -->
 </div>
 <div class="lowerbody">
@@ -61,6 +77,9 @@
 			<s:text name="test.common"></s:text>
 			<div id="tabs-1"><s:text name="welcome.text" /><br/>
 			
+<canvas id="canvasfirst" width="600" height="300">
+<s:text name="unsupported.error" />
+</canvas>
 <s:form action="chart.action">
 <table>
 <tr><s:actionerror /></tr>
@@ -70,9 +89,6 @@
 </table>
 </s:form>
 id entered : <s:property value="model.id"/>
-<canvas id="canvasfirst" width="780" height="550">
-<s:text name="unsupported.error" />
-</canvas>
 </div>
 <div id="tabs-2"><s:text name="test.lorem1" /></div>
 <div id="tabs-3"><s:text name="test.lorem2" /></div>
@@ -125,7 +141,7 @@ drawLine2(<s:property value="closeList"/>,<s:property value="size" />);
 <div class="upperfooter" >
 <s:text name = "test.lorem2" /></div>
 <div class="lowerfooter" >
-<s:text name="global.logout"></s:text> | <s:text name="global.get.premium"></s:text> | <s:text name="global.conditions"></s:text> | <s:text name="global.contact.us"></s:text> 
+<s:text name="global.logout"></s:text> | <s:text name="global.get.premium"></s:text> | <a href="../terms.action"><s:text name="global.conditions"></s:text></a> | <a href="../contactUs.action"><s:text name="global.contact.us"></s:text></a> 
 </div>
 </div>
 </body>

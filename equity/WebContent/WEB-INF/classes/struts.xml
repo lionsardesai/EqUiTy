@@ -21,7 +21,12 @@
 		<action name="welcome" class="com.lionsardesai.action.WelcomeAction">
 			<result name="SUCCESS">/WEB-INF/pages/common/welcome2.jsp</result>
 		</action>
-		
+		<action name="terms" class="com.lionsardesai.action.WelcomeAction">
+			<result name="SUCCESS">/WEB-INF/pages/common/Terms.jsp</result>
+		</action>
+		<action name="contactUs" class="com.lionsardesai.action.WelcomeAction">
+			<result name="SUCCESS">/WEB-INF/pages/common/ContactUs.jsp</result>
+		</action>
 	</package>
 	
 	<package name="chart" namespace="/chart" extends="struts-default">

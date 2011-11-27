@@ -29,15 +29,90 @@ function drawLine(oldx, oldy, y, scale){
 function drawLine2(listclose, scale){
 	var canvas = document.getElementById("canvasfirst");
 	var context = canvas.getContext("2d");
-	context.strokeStyle = "rgb(255,0,0)";
+	
+	//cross-hairs
+	
+	context.strokeStyle = "rgba(92,156,204,1)";
 	context.lineWidth = 1;
+	
+	context.moveTo(50,0);
+	context.lineTo(50,300);
+	context.stroke();
+	
+	context.moveTo(100,0);
+	context.lineTo(100,300);
+	context.stroke();
+	
+	context.moveTo(150,0);
+	context.lineTo(150,300);
+	context.stroke();
+	
+	context.moveTo(200,0);
+	context.lineTo(200,300);
+	context.stroke();
+	
+	context.moveTo(250,0);
+	context.lineTo(250,300);
+	context.stroke();
+	
+	context.moveTo(300,0);
+	context.lineTo(300,300);
+	context.stroke();
+	
+	context.moveTo(350,0);
+	context.lineTo(350,300);
+	context.stroke();
+	
+	context.moveTo(400,0);
+	context.lineTo(400,300);
+	context.stroke();
+	
+	context.moveTo(450,0);
+	context.lineTo(450,300);
+	context.stroke();
+	
+	context.moveTo(500,0);
+	context.lineTo(500,300);
+	context.stroke();
+	
+	context.moveTo(550,0);
+	context.lineTo(550,300);
+	context.stroke();
+	
+	context.moveTo(0,50);
+	context.lineTo(600,50);
+	context.stroke();
+	
+	context.moveTo(0,100);
+	context.lineTo(600,100);
+	context.stroke();
+	
+	context.moveTo(0,150);
+	context.lineTo(600,150);
+	context.stroke();
+	
+	context.moveTo(0,200);
+	context.lineTo(600,200);
+	context.stroke();
+	
+	context.moveTo(0,250);
+	context.lineTo(600,250);
+	context.stroke();
+
+	context.lineWidth = 1;
+	context.moveTo(0,300);
 	context.beginPath();
-	context.moveTo(0,0);
 	for(var i=0;i<listclose.length;i++) {
-		context.lineTo((780/scale)*i,550-listclose[i]);
+		context.lineTo((600/scale)*i,300-listclose[i]);
 	}
+	context.lineTo(600,300-listclose[listclose.length-1]);
+	context.lineTo(600,300);
+	context.lineTo(0,300);
+	context.fillStyle = "rgba(92,156,204,0.7)";
+	context.fill();
 	context.stroke();
 	context.endPath();
+		
 }
 function drawCandle(oldx, high, low, open, close, scale){
 	var canvas = document.getElementById("canvasfirst");

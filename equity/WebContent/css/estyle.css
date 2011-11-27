@@ -119,12 +119,14 @@ width: 100%;
 position:relative;
 bottom:inherit;
 width:inherit;
+text-align: center;
 }
 .lowerfooter
 {
 position:relative;
 bottom:inherit;
 width:inherit;
+text-align: center;
 }
 .commonfooter
 {
