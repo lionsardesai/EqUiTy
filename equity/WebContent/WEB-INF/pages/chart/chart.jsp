@@ -16,14 +16,16 @@
 <!-- <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>-->
 <script type="text/javascript" src="../js/jquery-ui-1.8.16.custom.min.js"></script>
 <!--<script type=text/javascript src="http://www.magic-rss.com/magic_js.cgi?z=32159&f=y"></script>-->
-<script src="http://www.blastcasta.com/feed-to-json.aspx?feedurl=http://feeds.bbci.co.uk/news/business/rss.xml&param=data"></script>
+<script src="http://www.blastcasta.com/feed-to-json.aspx?feedurl=http://feeds.bbci.co.uk/news/business/rss.xml&param=data1"></script>
+<script src="http://www.blastcasta.com/feed-to-json.aspx?feedurl=http://feeds.reuters.com/reuters/USpersonalfinanceNews&param=data2"></script>
 <script src="../js/jQuery.rollChildren.js"></script>  
 <script type="text/javascript">
 			$(function(){
 
 				var main_div = document.getElementById("news");
-		        for(i=0;i < data.rss.channel[0].item.length;i++) {
-		            main_div.innerHTML += "<div id=" + i + ">" + data.rss.channel[0].item[i].title + "<a href="+ data.rss.channel[0].item[i].link + ">[know more]</a></div>";
+		        for(i=0;i < data1.rss.channel[0].item.length && i<data2.rss.channel[0].item.length;i++) {
+		            main_div.innerHTML += "<div id=" + i + ">" + data1.rss.channel[0].title +" - "+ data1.rss.channel[0].item[i].title + "<a href="+ data1.rss.channel[0].item[i].link + ">[know more]</a></div>";
+		            main_div.innerHTML += "<div id=" + i + ">" + data2.rss.channel[0].title +" - "+ data2.rss.channel[0].item[i].title + "<a href="+ data2.rss.channel[0].item[i].link + ">[know more]</a></div>";
 		            
 		        }
 		        
