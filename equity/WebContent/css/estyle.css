@@ -134,13 +134,16 @@ position:absolute;
 width:100%;
 top:930px;
 background: rgb(169,228,247); /* Old browsers */
-background: -moz-linear-gradient(top,  rgba(169,228,247,1) 0%, rgba(74,156,214,1) 100%); /* FF3.6+ */
+background: -moz-linear-gradient(top,  #ffffff 0%, #4297D7 100%);/*try #5c9ccc instead */ /* FF3.6+ */
+/*background: -moz-linear-gradient(top,  rgba(169,228,247,1) 0%, rgba(74,156,214,1) 100%);*/ /* FF3.6+ */
 background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(169,228,247,1)), color-stop(100%,rgba(74,156,214,1))); /* Chrome,Safari4+ */
 background: -webkit-linear-gradient(top,  rgba(169,228,247,1) 0%,rgba(74,156,214,1) 100%); /* Chrome10+,Safari5.1+ */
 background: -o-linear-gradient(top,  rgba(169,228,247,1) 0%,rgba(74,156,214,1) 100%); /* Opera 11.10+ */
 background: -ms-linear-gradient(top,  rgba(169,228,247,1) 0%,rgba(74,156,214,1) 100%); /* IE10+ */
 background: linear-gradient(top,  rgba(169,228,247,1) 0%,rgba(74,156,214,1) 100%); /* W3C */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a9e4f7', endColorstr='#4a9cd6',GradientType=0 ); /* IE6-9 */
+margin:0 0 0 0;
+padding:0 0 0 0;
 }
 .commonheader
 {

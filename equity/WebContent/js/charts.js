@@ -34,6 +34,9 @@ function drawLine2(listclose, scale){
 	
 	context.strokeStyle = "rgba(92,156,204,1)";
 	context.lineWidth = 1;
+	context.moveTo(-0.5,0.5);
+	context.fillText("lowest close", 620, 250);
+	context.fillText("highest close", 620, 50);
 	
 	context.moveTo(50,0);
 	context.lineTo(50,300);
@@ -114,15 +117,30 @@ function drawLine2(listclose, scale){
 	context.endPath();
 		
 }
-function drawCandle(oldx, high, low, open, close, scale){
+function drawCandle(high, low, open, close, scale){
 	var canvas = document.getElementById("canvasfirst");
 	var context = canvas.getContext("2d");
+	
 	context.strokeStyle = "rgb(255,0,0)";
 	context.lineWidth = 1;
-	context.beginPath();
-	context.moveTo((780/scale)*(oldx+0.5),550-high);
-	context.lineTo((780/scale)*(oldx+0.5),550-low);
-	context.endPath();
-	context.fillRect(oldx,550-close,oldx+1,550-open);
+	//context.lineWidth=1*(600/scale);
+	context.moveTo(-0.5,0.5);
 	
+	for(var i=0;i<close.length;i++) {
+		context.moveTo((600/scale)*(i+0.5),300-close[i]);
+		context.lineTo((600/scale)*(i+0.5),300-open[i]);
+		context.stroke();
+		//context.fillRect((600/scale)*i,300-close[i],(600/scale)*(i+1),300-open[i]);
+	}
+	
+	context.strokeStyle = "rgb(92,156,204,0.7)";
+	//context.fillStyle = "rgba(92,156,204,0.7)";
+	//context.lineWidth = 1;
+	
+	for(var i=0;i<close.length;i++) {
+		context.moveTo((600/scale)*(i+0.5),300-high[i]);
+		context.lineTo((600/scale)*(i+0.5),300-low[i]);
+		context.stroke();
+	}
+	//context.stroke();
 }

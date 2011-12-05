@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import org.apache.log4j.Logger;
+
 import com.ibatis.sqlmap.client.SqlMapClient;
 import com.lionsardesai.beans.ChartListBean;
 import com.lionsardesai.beans.RAWDataBean;
@@ -30,6 +32,8 @@ import com.lionsardesai.dbi.YahooRecords;
  * 
  */
 public class ChartBusinessLogicImpl extends ChartBusinessLogic {
+
+	private final Logger logger = Logger.getLogger(this.getClass().getName());
 
 	/*
 	 * (non-Javadoc)
@@ -48,40 +52,49 @@ public class ChartBusinessLogicImpl extends ChartBusinessLogic {
 			Date dateInDB = dbi.getDate(con);
 			String oldDate;
 			if (dateInDB != null) {
-				if (dateInDB.getTime() > new Date().getTime() - 900000000L) {
+				if (dateInDB.getTime() > new Date().getTime() - 216000000L) {
 					return;
 				}
-				System.out.println("updating records");
+				logger.info("updating records");
 				oldDate = new SimpleDateFormat("yyyy-MM-dd").format(dateInDB);
-				System.out.println("records present till date : " + oldDate);
+				logger.info("records present till date : " + oldDate);
 			} else {
 				oldDate = "2011-10-01";
-				System.out.println("no data in DB");
+				logger.info("no data in DB");
 			}
 			String[] oldDateSplit = oldDate.split("-");
 			String oldDay = oldDateSplit[2];
 			int tempmonth = Integer.parseInt(oldDateSplit[1]);
 			tempmonth--;
-			String oldMonth = Integer.toString(tempmonth);
+			String oldMonth = String.format("%02d", tempmonth);
 			String oldYear = oldDateSplit[0];
 			String[] newDateSplit = (new SimpleDateFormat("yyyy-MM-dd")
 					.format(new Date())).split("-");
 			String newDay = newDateSplit[2];
 			tempmonth = Integer.parseInt(newDateSplit[1]);
 			tempmonth--;
-			String newMonth = Integer.toString(tempmonth);
+			String newMonth = String.format("%02d", tempmonth);
 			String newYear = newDateSplit[0];
 
+			// logging dates to query
+			logger.debug("old date in yyyymmdd format : " + oldYear + oldMonth
+					+ oldDay);
+			logger.debug("new date in yyyymmdd format : " + newYear + newMonth
+					+ newDay);
+
 			for (String id : Constants.listAll) {
+				// logger.info("yahoo keeps changing formats but mostly maintains the number of arguments and their structure");
+				// logger.info("check yahoo site manually if IOException is being caught");
 				URL u1 = new URL("http://ichart.finance.yahoo.com/table.csv?s="
 						+ id // id of the stock to get
-						+ "&a=" + oldDay + // old date
-						"&b=" + oldMonth + // old month
+						+ "&a=" + oldMonth + // old date
+						"&b=" + oldDay + // old month
 						"&c=" + oldYear + // old year
-						"&d=" + newDay + // new date
-						"&e=" + newMonth + // new month
+						"&d=" + newMonth + // new date
+						"&e=" + newDay + // new month
 						"&f=" + newYear + // new year
 						"&g=d&ignore=.csv");
+				logger.debug("query url : " + u1.getQuery());
 				input = (InputStream) u1.getContent();
 				in = new InputStreamReader(input);
 				updateRecords(id, dbi, in, con);
@@ -90,12 +103,15 @@ public class ChartBusinessLogicImpl extends ChartBusinessLogic {
 			}
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
+			logger.error("MalformedURLException occured");
 			throw new UnClassifiedException();
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
+			logger.error("IOException occured");
 			throw new UnClassifiedException();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
+			logger.error("SQLException occured");
 			throw new UnClassifiedException();
 		} finally {
 			try {
@@ -107,6 +123,7 @@ public class ChartBusinessLogicImpl extends ChartBusinessLogic {
 				}
 			} catch (IOException e) {
 				// TODO log close error
+				logger.error("IOException occured");
 				throw new UnClassifiedException();
 			}
 		}
@@ -118,7 +135,7 @@ public class ChartBusinessLogicImpl extends ChartBusinessLogic {
 			throws UnClassifiedException {
 
 		try {
-			System.out.println("id to be queried " + id);
+			logger.debug("id to be queried " + id);
 			List<String> data = dbi.getRecords(in);
 			List<RAWDataBean> entities = new ArrayList<RAWDataBean>();
 			for (String line : data) {
@@ -126,13 +143,13 @@ public class ChartBusinessLogicImpl extends ChartBusinessLogic {
 				if (line.contains("Date")) {
 					continue;
 				}
-				System.out.print("| ");
 				entities.add(RAWDataBean.MakeRAWDataBean(line, id));
 			}
 			dbi.writeRecords(con, entities);
 			return entities;
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
+			logger.error("ParseException occured");
 			throw new UnClassifiedException();
 		}
 	}
@@ -146,17 +163,19 @@ public class ChartBusinessLogicImpl extends ChartBusinessLogic {
 	@Override
 	public List<RAWDataBean> getRecords(ChartListBean model)
 			throws UnClassifiedException {
-		// TODO Auto-generated method stub
 		try {
 			ConnectionFactory temp = new ConnectionFactory();
 			SqlMapClient con = temp.getConnection();
 			SelectRAWData dbi = new SelectRAWData();
+			// TODO default at 30 days, change inteval later
 			return dbi.getRecords(con, model.getId());
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
+			logger.error("IOException occured");
 			e.printStackTrace();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
+			logger.error("SQLException occured");
 			e.printStackTrace();
 		}
 

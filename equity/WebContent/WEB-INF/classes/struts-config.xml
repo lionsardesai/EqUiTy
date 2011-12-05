@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+"http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+	<global-exceptions>
+		<exception key="errors.msg" type="java.lang.Exception" path="/WEB-INF/pages/common/errors/unClassifiedExceptionError.jsp"/>
+		<exception key="errors.msg" type="java.lang.UnClassifiedException" path="/WEB-INF/pages/common/errors/unClassifiedExceptionError.jsp"/>
+	</global-exceptions>
+	
+</struts-config>

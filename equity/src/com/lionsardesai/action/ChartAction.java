@@ -33,23 +33,18 @@ public class ChartAction extends BaseAction<ChartListBean> {
 
 	@Override
 	public String execute() throws Exception {
-		// ChartBusinessLogic welcome = new FakeWelcomeBusinessLogicImpl();
 		ChartBusinessLogic chartlogic = new ChartBusinessLogicImpl();
 
 		try {
-			// welcome.init();
-			// welcomelogic.init();
-			logger.info("setting data");
+			chartlogic.init();
 			getModel().setNewData(chartlogic.getRecords(getModel()));
-			logger.info("data set");
-			// this.getModel().setNewData(
-			// welcomelogic.updateRecords(this.getModel()));
 
 		} catch (NullPointerException e) {
 			// TODO Redirect to error page using error action
-			logger.error("Null po - prolly model");
+			logger.error("NULL pointer caught");
 		} catch (UnClassifiedException e) {
 			// TODO Redirect to error page using error action
+			logger.error("UnClassified Exception Caught");
 		}
 		return "SUCCESS";
 	}

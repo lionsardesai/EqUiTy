@@ -78,10 +78,34 @@
 			</ul>
 			<s:text name="test.common"></s:text>
 			<div id="tabs-1"><s:text name="welcome.text" /><br/>
-			
-<canvas id="canvasfirst" width="600" height="300">
+			<s:text name="test.lorem1" />
+</div>
+<div id="tabs-2">
+<canvas id="canvasfirst" width="700" height="300">
 <s:text name="unsupported.error" />
 </canvas>
+<canvas id="canvassecond" width="700" height="50">
+<s:text name="unsupported.error" />
+</canvas>
+<SCRIPT type="text/javascript">
+var canvas = document.getElementById("canvassecond");
+var context = canvas.getContext("2d");
+//context.fillStyle = "rgb(0,0,255)";
+//context.fillRect(30,30,50,50);
+context.strokeStyle = "rgb(255,0,0)";
+//context.strokeRect(0,0,780,550);
+context.lineWidth = 1;
+//context.beginPath();
+context.moveTo(10,10);
+context.lineTo(20,20);
+//context.bezierCurveTo(50,40,50,40,150,150);
+context.lineTo(20,30);
+context.lineTo(10,10);
+//context.fill();
+context.stroke();
+//context.endPath();
+
+</SCRIPT>
 <s:form action="chart.action">
 <table>
 <tr><s:actionerror /></tr>
@@ -92,7 +116,6 @@
 </s:form>
 id entered : <s:property value="model.id"/>
 </div>
-<div id="tabs-2"><s:text name="test.lorem1" /></div>
 <div id="tabs-3"><s:text name="test.lorem2" /></div>
 <div id="tabs-4"><s:text name="test.lorem3" /></div>
 <!-- end tabs -->
@@ -133,6 +156,7 @@ id entered : <s:property value="model.id"/>
 </UL>
 <script>
 drawLine2(<s:property value="closeList"/>,<s:property value="size" />);
+//drawCandle(<s:property value ="highList"/>,<s:property value ="lowList" />,<s:property value ="openList" />,<s:property value="closeList" />,<s:property value = "size" />);
 </script>
 </div>
 <!-- close lower body tab -->
