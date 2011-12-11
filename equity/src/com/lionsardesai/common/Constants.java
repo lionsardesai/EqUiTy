@@ -51,4 +51,21 @@ public class Constants {
 			STC16, STC17, STC18, STC19, STC20, STC21, STC22, STC23, STC24,
 			STC25, STC26, STC27, STC28, STC29, STC30, STC31, STC32 };
 
+	// indicators
+	public final static String INDICATOR_ROC = "roc";
+	public final static String INDICATOR_MFI = "mfi";
+	public final static String INDICATOR_MACD = "macd";
+	public final static String INDICATOR_AD = "ad";
+	public final static String INDICATOR_STOC = "stoc";
+	public final static String INDICATOR_RSI = "rsi";
+	public final static String INDICATOR_7 = "roc";
+	public final static String INDICATOR_8 = "roc";
+
+	// in-house predictors
+	public final static String PREDICTOR_1 = "pr1";
+	public final static String PREDICTOR_2 = "pr2";
+	public final static String PREDICTOR_3 = "pr3";
+	public final static String PREDICTOR_4 = "pr4";
+	public final static String PREDICTOR_5 = "pr5";
+
 }

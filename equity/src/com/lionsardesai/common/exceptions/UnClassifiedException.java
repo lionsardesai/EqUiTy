@@ -7,7 +7,7 @@ package com.lionsardesai.common.exceptions;
  * @author shardul
  * 
  */
-public class UnClassifiedException extends Throwable {
+public class UnClassifiedException extends Exception {
 
 	/**
 	 * 

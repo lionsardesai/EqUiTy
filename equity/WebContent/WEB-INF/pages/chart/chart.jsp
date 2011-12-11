@@ -30,14 +30,15 @@
 		        }
 		        
 				// Tabs
-				$('#tabs').tabs();
+				var $tabs=$('#tabs').tabs();
+				$tabs.tabs('select',1);
 				
 				$('#news').rollchildren({  
 	                delay_time : 3000,  
 	                loop : true,  
 	                pause_on_mouseover : true,  
 	                roll_up_old_item : true,  
-	                speed: 'slow',     
+	                speed: 'slow'   
 	          });
 	
 			});
@@ -84,34 +85,23 @@
 <canvas id="canvasfirst" width="700" height="300">
 <s:text name="unsupported.error" />
 </canvas>
+<s:if test="%{techChart!=null}">
+<BR /><BR />
 <canvas id="canvassecond" width="700" height="50">
 <s:text name="unsupported.error" />
 </canvas>
 <SCRIPT type="text/javascript">
-var canvas = document.getElementById("canvassecond");
-var context = canvas.getContext("2d");
-//context.fillStyle = "rgb(0,0,255)";
-//context.fillRect(30,30,50,50);
-context.strokeStyle = "rgb(255,0,0)";
-//context.strokeRect(0,0,780,550);
-context.lineWidth = 1;
-//context.beginPath();
-context.moveTo(10,10);
-context.lineTo(20,20);
-//context.bezierCurveTo(50,40,50,40,150,150);
-context.lineTo(20,30);
-context.lineTo(10,10);
-//context.fill();
-context.stroke();
-//context.endPath();
-
+alternategraph(<s:property value="techData"/>,<s:property value="size" />);
 </SCRIPT>
+</s:if>
 <s:form action="chart.action">
 <table>
 <tr><s:actionerror /></tr>
 <tr><td>
 	<s:select list="model.listAll" name="id"></s:select></td><td>
-	<s:submit type="button" label="refresh"></s:submit></td></tr>
+	<s:submit type="button" label="refresh"></s:submit></td></tr><tr><td>
+	<s:radio name="techChart" label="Technical Analysis" list="{'roc','mfi', 'rsi', 'macd', 'stoc', 'ad' }" /></td><td></td></tr><tr><td>
+	<s:radio name="chartType" label="Graph Type" list="{'bar', 'candle', 'line'}" /></td><td></td></tr>
 </table>
 </s:form>
 id entered : <s:property value="model.id"/>
@@ -154,10 +144,16 @@ id entered : <s:property value="model.id"/>
 		</ul>
 	</LI>
 </UL>
+<s:if test="%{chartType=='line'}">
 <script>
 drawLine2(<s:property value="closeList"/>,<s:property value="size" />);
-//drawCandle(<s:property value ="highList"/>,<s:property value ="lowList" />,<s:property value ="openList" />,<s:property value="closeList" />,<s:property value = "size" />);
 </script>
+</s:if>
+<s:elseif test="%{chartType=='candle'}">
+<script>
+drawCandle(<s:property value ="highList"/>,<s:property value ="lowList" />,<s:property value ="openList" />,<s:property value="closeList" />,<s:property value = "size" />);
+</script>
+</s:elseif>
 </div>
 <!-- close lower body tab -->
 </div>

@@ -53,7 +53,7 @@ public class RAWDataBean implements Serializable {
 		this.divident = divident;
 	}
 
-	public static RAWDataBean MakeRAWDataBean(String data, String id)
+	public static RAWDataBean makeRAWDataBean(String data, String id)
 			throws ParseException {
 		String[] fields = data.split(",");
 		// TODO read date format from property file

@@ -23,13 +23,14 @@ public class ChartListBean implements Serializable {
 	private static final long serialVersionUID = 8353816144236299966L;
 
 	/** line type of graph @see */
-	private static final int CHART_TYPE_LINE = 0;
+	private static final String CHART_TYPE_LINE = "line";
 	/** candle type of graph */
-	private static final int CHART_TYPE_CANDLE = 1;
+	private static final String CHART_TYPE_CANDLE = "candle";
 	/** bar type of graph */
-	private static final int CHART_TYPE_BAR = 2;
+	private static final String CHART_TYPE_BAR = "bar";
 
-	private final Logger logger = Logger.getLogger(this.getClass().getName());
+	private static final Logger logger = Logger.getLogger(ChartListBean.class
+			.getSimpleName());
 
 	public String id = Constants.listAll[4];
 	public List<RAWDataBean> newData = new ArrayList<RAWDataBean>();
@@ -41,6 +42,10 @@ public class ChartListBean implements Serializable {
 	List<String> highList = new ArrayList<String>();
 	List<String> lowList = new ArrayList<String>();
 	List<String> openList = new ArrayList<String>();
+
+	/** technical analysis chart select */
+	String techChart = null;
+	List<String> techData = new ArrayList<String>();
 
 	// TODO remove unused max/min variables
 	// TODO replace by range of close/open/high/low
@@ -58,8 +63,8 @@ public class ChartListBean implements Serializable {
 	 * is it possible to shift common variables for pages to someplace else?
 	 */
 	/** line, candle or other chart types to display */
-	public int chartType = CHART_TYPE_LINE;
-	public int tabNumber;
+	public String chartType = CHART_TYPE_LINE;
+	public int tabNumber = 0;
 
 	/**
 	 * 
@@ -81,84 +86,6 @@ public class ChartListBean implements Serializable {
 	public void setNewData(List<RAWDataBean> newData) {
 		this.newData = newData;
 		this.size = newData.size();
-		closeMax = Float.parseFloat(newData.get(0).close);
-		closeMin = Float.parseFloat(newData.get(0).close);
-		openMax = Float.parseFloat(newData.get(0).open);
-		openMin = Float.parseFloat(newData.get(0).open);
-		highMax = Float.parseFloat(newData.get(0).high);
-		highMin = Float.parseFloat(newData.get(0).high);
-		lowMax = Float.parseFloat(newData.get(0).low);
-		lowMin = Float.parseFloat(newData.get(0).low);
-
-		logger.debug("close max value before start " + closeMax);
-		logger.debug("close min value before start " + closeMin);
-
-		for (int i = 0; i < newData.size(); i++) {
-			this.closeList.add(newData.get(i).close);
-			this.openList.add(newData.get(i).open);
-			this.highList.add(newData.get(i).high);
-			logger.debug(this.highList.get(i));
-			this.lowList.add(newData.get(i).low);
-
-			// assign closeMax
-			if (closeMax < Float.parseFloat(newData.get(i).close)) {
-				closeMax = Float.parseFloat(newData.get(i).close);
-			}
-			// assign closeMin
-			if (closeMin > Float.parseFloat(newData.get(i).close)) {
-				closeMin = Float.parseFloat(newData.get(i).close);
-			}
-			// assign openMax
-			if (openMax < Float.parseFloat(newData.get(i).open)) {
-				openMax = Float.parseFloat(newData.get(i).open);
-			}
-			// assign openMin
-			if (openMin > Float.parseFloat(newData.get(i).open)) {
-				openMin = Float.parseFloat(newData.get(i).open);
-			}
-			// assign highMax
-			if (highMax < Float.parseFloat(newData.get(i).high)) {
-				highMax = Float.parseFloat(newData.get(i).high);
-			}
-			// assign highMin
-			if (highMin > Float.parseFloat(newData.get(i).high)) {
-				highMin = Float.parseFloat(newData.get(i).high);
-			}
-			// assign lowMax
-			if (lowMax < Float.parseFloat(newData.get(i).low)) {
-				lowMax = Float.parseFloat(newData.get(i).low);
-			}
-			// assign lowMin
-			if (lowMin > Float.parseFloat(newData.get(i).low)) {
-				lowMin = Float.parseFloat(newData.get(i).low);
-			}
-
-		}
-
-		// scaling
-		for (int i = 0; i < newData.size(); i++) {
-			float tempclose;
-			// close
-			tempclose = (Float.parseFloat(closeList.get(i)) - closeMin)
-					* (float) 250.0 / (closeMax - closeMin) + 25;
-			closeList.set(i, Float.toString(tempclose));
-
-			// open
-			tempclose = (Float.parseFloat(openList.get(i)) - openMin)
-					* (float) 250.0 / (openMax - openMin) + 25;
-			openList.set(i, Float.toString(tempclose));
-
-			// high
-			tempclose = (Float.parseFloat(highList.get(i)) - highMin)
-					* (float) 250.0 / (highMax - highMin) + 25;
-			highList.set(i, Float.toString(tempclose));
-
-			// low
-			tempclose = (Float.parseFloat(lowList.get(i)) - lowMin)
-					* (float) 250.0 / (lowMax - lowMin) + 25;
-			lowList.set(i, Float.toString(tempclose));
-
-		}
 	}
 
 	/**
@@ -173,7 +100,6 @@ public class ChartListBean implements Serializable {
 	 *            the id to set
 	 */
 	public void setId(String id) {
-		System.out.println(id);
 		this.id = id;
 	}
 
@@ -194,7 +120,7 @@ public class ChartListBean implements Serializable {
 	/**
 	 * @return the chartType
 	 */
-	public int getChartType() {
+	public String getChartType() {
 		return chartType;
 	}
 
@@ -202,7 +128,7 @@ public class ChartListBean implements Serializable {
 	 * @param chartType
 	 *            the chartType to set
 	 */
-	public void setChartType(int chartType) {
+	public void setChartType(String chartType) {
 		this.chartType = chartType;
 	}
 
@@ -241,4 +167,187 @@ public class ChartListBean implements Serializable {
 	public List<String> getOpenList() {
 		return openList;
 	}
+
+	/**
+	 * @param closeList
+	 *            the closeList to set
+	 */
+	public void setCloseList(List<String> closeList) {
+		this.closeList = closeList;
+	}
+
+	/**
+	 * @param highList
+	 *            the highList to set
+	 */
+	public void setHighList(List<String> highList) {
+		this.highList = highList;
+	}
+
+	/**
+	 * @param lowList
+	 *            the lowList to set
+	 */
+	public void setLowList(List<String> lowList) {
+		this.lowList = lowList;
+	}
+
+	/**
+	 * @param openList
+	 *            the openList to set
+	 */
+	public void setOpenList(List<String> openList) {
+		this.openList = openList;
+	}
+
+	/**
+	 * @return the techChart
+	 */
+	public String getTechChart() {
+		return techChart;
+	}
+
+	/**
+	 * @param techChart
+	 *            the techChart to set
+	 */
+	public void setTechChart(String techChart) {
+		this.techChart = techChart;
+	}
+
+	/**
+	 * @return the closeMax
+	 */
+	public float getCloseMax() {
+		return closeMax;
+	}
+
+	/**
+	 * @param closeMax
+	 *            the closeMax to set
+	 */
+	public void setCloseMax(float closeMax) {
+		this.closeMax = closeMax;
+	}
+
+	/**
+	 * @return the closeMin
+	 */
+	public float getCloseMin() {
+		return closeMin;
+	}
+
+	/**
+	 * @param closeMin
+	 *            the closeMin to set
+	 */
+	public void setCloseMin(float closeMin) {
+		this.closeMin = closeMin;
+	}
+
+	/**
+	 * @return the highMax
+	 */
+	public float getHighMax() {
+		return highMax;
+	}
+
+	/**
+	 * @param highMax
+	 *            the highMax to set
+	 */
+	public void setHighMax(float highMax) {
+		this.highMax = highMax;
+	}
+
+	/**
+	 * @return the highMin
+	 */
+	public float getHighMin() {
+		return highMin;
+	}
+
+	/**
+	 * @param highMin
+	 *            the highMin to set
+	 */
+	public void setHighMin(float highMin) {
+		this.highMin = highMin;
+	}
+
+	/**
+	 * @return the lowMax
+	 */
+	public float getLowMax() {
+		return lowMax;
+	}
+
+	/**
+	 * @param lowMax
+	 *            the lowMax to set
+	 */
+	public void setLowMax(float lowMax) {
+		this.lowMax = lowMax;
+	}
+
+	/**
+	 * @return the lowMin
+	 */
+	public float getLowMin() {
+		return lowMin;
+	}
+
+	/**
+	 * @param lowMin
+	 *            the lowMin to set
+	 */
+	public void setLowMin(float lowMin) {
+		this.lowMin = lowMin;
+	}
+
+	/**
+	 * @return the openMax
+	 */
+	public float getOpenMax() {
+		return openMax;
+	}
+
+	/**
+	 * @param openMax
+	 *            the openMax to set
+	 */
+	public void setOpenMax(float openMax) {
+		this.openMax = openMax;
+	}
+
+	/**
+	 * @return the openMin
+	 */
+	public float getOpenMin() {
+		return openMin;
+	}
+
+	/**
+	 * @param openMin
+	 *            the openMin to set
+	 */
+	public void setOpenMin(float openMin) {
+		this.openMin = openMin;
+	}
+
+	/**
+	 * @return the techData
+	 */
+	public List<String> getTechData() {
+		return techData;
+	}
+
+	/**
+	 * @param techData
+	 *            the techData to set
+	 */
+	public void setTechData(List<String> techData) {
+		this.techData = techData;
+	}
+
 }

@@ -21,7 +21,8 @@ public class ChartAction extends BaseAction<ChartListBean> {
 	 */
 	private static final long serialVersionUID = 5071072182260473466L;
 
-	private final Logger logger = Logger.getLogger(this.getClass().getName());
+	private static final Logger logger = Logger.getLogger(ChartAction.class
+			.getSimpleName());
 
 	@Override
 	public ChartListBean getModel() {
@@ -38,6 +39,7 @@ public class ChartAction extends BaseAction<ChartListBean> {
 		try {
 			chartlogic.init();
 			getModel().setNewData(chartlogic.getRecords(getModel()));
+			chartlogic.evaluate(getModel());
 
 		} catch (NullPointerException e) {
 			// TODO Redirect to error page using error action

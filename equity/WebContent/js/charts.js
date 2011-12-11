@@ -15,8 +15,28 @@ function init(lines){
 	context.stroke();
 	context.endPath();
 };
+function alternategraph(data, scale){
+	var canvas = document.getElementById("canvassecond");
+	var context = canvas.getContext("2d");
+	context.strokeStyle = "rgba(92,156,204,1)";
+	context.lineWidth = 1;
+	context.moveTo(10,10);
+	context.beginPath();
+	for(var i=0;i<data.length;i++) {
+		context.lineTo((600/scale)*i,25-data[i]*10);
+	}
+	context.moveTo(0,25);
+	context.lineTo(600,25);
+	context.moveTo(0,0);
+	context.strokeRect(0,0,600,50);
+	context.stroke();
+	//context.endPath();
+	context.fillText("tech analysis",620,25);
+	context.fillText("graphs",620,15);
+
+}
 function drawLine(oldx, oldy, y, scale){
-	var canvas = document.getElementById("canvasfirst");
+	var canvas = document.getElementById("canvassecond");
 	var context = canvas.getContext("2d");
 	context.strokeStyle = "rgb(255,0,0)";
 	context.lineWidth = 1;
@@ -35,52 +55,52 @@ function drawLine2(listclose, scale){
 	context.strokeStyle = "rgba(92,156,204,1)";
 	context.lineWidth = 1;
 	context.moveTo(-0.5,0.5);
-	context.fillText("lowest close", 620, 250);
-	context.fillText("highest close", 620, 50);
+	context.fillText("lowest close", 620, 275);
+	context.fillText("highest close", 620, 25);
 	
-	context.moveTo(50,0);
-	context.lineTo(50,300);
-	context.stroke();
+//	context.moveTo(50,0);
+//	context.lineTo(50,300);
+//	context.stroke();
 	
 	context.moveTo(100,0);
 	context.lineTo(100,300);
 	context.stroke();
 	
-	context.moveTo(150,0);
-	context.lineTo(150,300);
-	context.stroke();
+//	context.moveTo(150,0);
+//	context.lineTo(150,300);
+//	context.stroke();
 	
 	context.moveTo(200,0);
 	context.lineTo(200,300);
 	context.stroke();
 	
-	context.moveTo(250,0);
-	context.lineTo(250,300);
-	context.stroke();
+//	context.moveTo(250,0);
+//	context.lineTo(250,300);
+//	context.stroke();
 	
 	context.moveTo(300,0);
 	context.lineTo(300,300);
 	context.stroke();
 	
-	context.moveTo(350,0);
-	context.lineTo(350,300);
-	context.stroke();
+//	context.moveTo(350,0);
+//	context.lineTo(350,300);
+//	context.stroke();
 	
 	context.moveTo(400,0);
 	context.lineTo(400,300);
 	context.stroke();
 	
-	context.moveTo(450,0);
-	context.lineTo(450,300);
-	context.stroke();
+//	context.moveTo(450,0);
+//	context.lineTo(450,300);
+//	context.stroke();
 	
 	context.moveTo(500,0);
 	context.lineTo(500,300);
 	context.stroke();
 	
-	context.moveTo(550,0);
-	context.lineTo(550,300);
-	context.stroke();
+//	context.moveTo(550,0);
+//	context.lineTo(550,300);
+//	context.stroke();
 	
 	context.moveTo(0,50);
 	context.lineTo(600,50);

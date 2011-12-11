@@ -20,4 +20,6 @@ public abstract class ChartBusinessLogic {
 	public abstract List<RAWDataBean> getRecords(ChartListBean model)
 			throws UnClassifiedException;
 
+	public abstract void evaluate(ChartListBean model);
+
 }

@@ -141,7 +141,7 @@ public class WelcomeBusinessLogicImpl extends WelcomeBusinessLogic {
 				if (line.contains("Date")) {
 					continue;
 				}
-				entities.add(RAWDataBean.MakeRAWDataBean(line, id));
+				entities.add(RAWDataBean.makeRAWDataBean(line, id));
 			}
 			dbi.writeRecords(con, entities);
 			return entities;

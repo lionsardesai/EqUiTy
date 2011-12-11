@@ -26,7 +26,11 @@ public class BaseAction<T> extends ActionSupport implements ModelDriven<T> {
 
 	public void setModel(T model) {
 		this.model = model;
-		System.out.println("setting model " + this.model.toString());
+		if (this.model == null) {
+			System.out.println("model is null, not setting");
+		} else {
+			System.out.println("setting model " + this.model.toString());
+		}
 	}
 
 	@Override
