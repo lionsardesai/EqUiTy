@@ -42,12 +42,14 @@ public class ChartListBean implements Serializable {
 	List<String> highList = new ArrayList<String>();
 	List<String> lowList = new ArrayList<String>();
 	List<String> openList = new ArrayList<String>();
+	List<String> volumeList = new ArrayList<String>();
 
 	/** technical analysis chart select */
 	String techChart = null;
 	List<String> techData = new ArrayList<String>();
 
 	// TODO remove unused max/min variables
+	// FIXME make max/min variables local so that chartlistbean is lighter
 	// TODO replace by range of close/open/high/low
 	// variables for chart display starting from here
 	public float closeMax;
@@ -58,6 +60,8 @@ public class ChartListBean implements Serializable {
 	public float lowMin;
 	public float openMax;
 	public float openMin;
+	public float volumeMax;
+	public float volumeMin;
 
 	/*
 	 * is it possible to shift common variables for pages to someplace else?
@@ -348,6 +352,51 @@ public class ChartListBean implements Serializable {
 	 */
 	public void setTechData(List<String> techData) {
 		this.techData = techData;
+	}
+
+	/**
+	 * @return the volumeList
+	 */
+	public List<String> getVolumeList() {
+		return volumeList;
+	}
+
+	/**
+	 * @param volumeList
+	 *            the volumeList to set
+	 */
+	public void setVolumeList(List<String> volumeList) {
+		this.volumeList = volumeList;
+	}
+
+	/**
+	 * @return the volumeMax
+	 */
+	public float getVolumeMax() {
+		return volumeMax;
+	}
+
+	/**
+	 * @param volumeMax
+	 *            the volumeMax to set
+	 */
+	public void setVolumeMax(float volumeMax) {
+		this.volumeMax = volumeMax;
+	}
+
+	/**
+	 * @return the volumeMin
+	 */
+	public float getVolumeMin() {
+		return volumeMin;
+	}
+
+	/**
+	 * @param volumeMin
+	 *            the volumeMin to set
+	 */
+	public void setVolumeMin(float volumeMin) {
+		this.volumeMin = volumeMin;
 	}
 
 }

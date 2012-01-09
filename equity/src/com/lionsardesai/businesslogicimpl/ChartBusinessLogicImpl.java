@@ -72,7 +72,7 @@ public class ChartBusinessLogicImpl extends ChartBusinessLogic {
 	 * .beans.ChartListBean)
 	 */
 	@Override
-	public void evaluate(ChartListBean model) {
+	public void evaluate(ChartListBean model) throws NullPointerException {
 		List<RAWDataBean> newData = model.getNewData();
 		float closeMax = Float.parseFloat(newData.get(0).close);
 		float closeMin = Float.parseFloat(newData.get(0).close);
@@ -82,20 +82,23 @@ public class ChartBusinessLogicImpl extends ChartBusinessLogic {
 		float highMin = Float.parseFloat(newData.get(0).high);
 		float lowMax = Float.parseFloat(newData.get(0).low);
 		float lowMin = Float.parseFloat(newData.get(0).low);
-
-		logger.debug("close max value before start " + closeMax);
-		logger.debug("close min value before start " + closeMin);
+		float volumeMax = Float.parseFloat(newData.get(0).volume);
+		float volumeMin = Float.parseFloat(newData.get(0).volume);
 
 		List<String> closeList = new ArrayList<String>();
 		List<String> openList = new ArrayList<String>();
 		List<String> highList = new ArrayList<String>();
 		List<String> lowList = new ArrayList<String>();
+		List<String> volumeList = new ArrayList<String>();
 
+		logger.info("starting assignment of extremes newdata size is : "
+				+ newData.size());
 		for (int i = 0; i < newData.size(); i++) {
 			closeList.add(newData.get(i).close);
 			openList.add(newData.get(i).open);
 			highList.add(newData.get(i).high);
 			lowList.add(newData.get(i).low);
+			volumeList.add(newData.get(i).volume);
 
 			// assign closeMax
 			if (closeMax < Float.parseFloat(newData.get(i).close)) {
@@ -129,10 +132,19 @@ public class ChartBusinessLogicImpl extends ChartBusinessLogic {
 			if (lowMin > Float.parseFloat(newData.get(i).low)) {
 				lowMin = Float.parseFloat(newData.get(i).low);
 			}
+			// assign volumeMax
+			if (volumeMax < Float.parseFloat(newData.get(i).volume)) {
+				volumeMax = Float.parseFloat(newData.get(i).volume);
+			}
+			// assign volumeMin
+			if (volumeMin > Float.parseFloat(newData.get(i).volume)) {
+				volumeMin = Float.parseFloat(newData.get(i).volume);
+			}
 
 		}
 
 		// scaling
+		logger.info("starting scaling");
 		for (int i = 0; i < newData.size(); i++) {
 			float tempclose;
 			// close
@@ -151,15 +163,23 @@ public class ChartBusinessLogicImpl extends ChartBusinessLogic {
 			highList.set(i, Float.toString(tempclose));
 
 			// low
-			tempclose = (Float.parseFloat(lowList.get(i)) - closeMin)
+			tempclose = (Float.parseFloat(volumeList.get(i)) - closeMin)
 					* (float) 250.0 / (closeMax - closeMin) + 25;
 			lowList.set(i, Float.toString(tempclose));
+
+			// volume
+			tempclose = Float.parseFloat(volumeList.get(i)) * (float) 100.0
+					/ (volumeMax);
+			volumeList.set(i, Float.toString(tempclose));
 
 		}
 
 		// set indicator data
 		List<String> techData = null;
-		if (model.getTechChart().equalsIgnoreCase(Constants.INDICATOR_ROC)) {
+		logger.info("starting techdata calculations ");
+		if (model.getTechChart() != null
+				&& model.getTechChart().equalsIgnoreCase(
+						Constants.INDICATOR_ROC)) {
 			logger.info("setting data for type " + Constants.INDICATOR_ROC);
 			techData = new ArrayList<String>();
 			techData.add("");
@@ -172,6 +192,7 @@ public class ChartBusinessLogicImpl extends ChartBusinessLogic {
 			}
 		}
 
+		// set all calculated values
 		model.setCloseMax(closeMax);
 		model.setCloseMin(closeMin);
 		model.setHighMax(highMax);
@@ -180,10 +201,13 @@ public class ChartBusinessLogicImpl extends ChartBusinessLogic {
 		model.setLowMin(lowMin);
 		model.setOpenMax(openMax);
 		model.setOpenMin(openMin);
+		model.setVolumeMax(volumeMax);
+		model.setVolumeMin(volumeMin);
 		model.setCloseList(closeList);
 		model.setHighList(highList);
 		model.setLowList(lowList);
 		model.setOpenList(openList);
 		model.setTechData(techData);
+		model.setVolumeList(volumeList);
 	}
 }

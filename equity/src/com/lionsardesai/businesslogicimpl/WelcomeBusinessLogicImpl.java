@@ -50,12 +50,12 @@ public class WelcomeBusinessLogicImpl extends WelcomeBusinessLogic {
 			Date dateInDB = dbi.getDate(con);
 			String oldDate;
 			if (dateInDB != null) {
+				oldDate = new SimpleDateFormat("yyyy-MM-dd").format(dateInDB);
+				logger.info("records present till date : " + oldDate);
 				if (dateInDB.getTime() > new Date().getTime() - 216000000L) {
 					return;
 				}
 				logger.info("updating records");
-				oldDate = new SimpleDateFormat("yyyy-MM-dd").format(dateInDB);
-				logger.info("records present till date : " + oldDate);
 			} else {
 				oldDate = "2011-10-01";
 				logger.info("no data in DB");

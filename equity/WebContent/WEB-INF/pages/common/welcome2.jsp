@@ -21,7 +21,7 @@
 </head>
  <body>
 <div class="welcome">
-<a href="chart/chart.action"><img src="${welcomeBanner}" height="" width=""/></a>
+<a href="../chart/chart.action"><img src="${welcomeBanner}" height="" width=""/></a>
 </div>
 </body>
 </html>	

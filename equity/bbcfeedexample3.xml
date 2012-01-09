@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet title="XSL_formatting" type="text/xsl" href="/shared/bsp/xsl/rss/nolsol.xsl"?>
+
+<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">  
+  <channel> 
+    <title>BBC News - Business</title>  
+    <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business/</link>  
+    <description>The latest stories from the Business section of the BBC News web site.</description>  
+    <language>en-gb</language>  
+    <lastBuildDate>Sun, 08 Jan 2012 02:10:34 GMT</lastBuildDate>  
+    <copyright>Copyright: (C) British Broadcasting Corporation, see http://news.bbc.co.uk/2/hi/help/rss/4498287.stm for terms and conditions of reuse.</copyright>  
+    <image> 
+      <url>http://news.bbcimg.co.uk/nol/shared/img/bbc_news_120x60.gif</url>  
+      <title>BBC News - Business</title>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business/</link>  
+      <width>120</width>  
+      <height>60</height> 
+    </image>  
+    <ttl>15</ttl>  
+    <atom:link href="http://feeds.bbci.co.uk/news/business/rss.xml" rel="self" type="application/rss+xml"/>  
+    <item> 
+      <title>PM backs executive pay vote plan</title>  
+      <description>David Cameron signals his intent to give shareholders binding votes on executive pay, as part of measures to deal with excessive salaries.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/uk-16458570</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/uk-16458570</guid>  
+      <pubDate>Sun, 08 Jan 2012 03:08:53 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57756000/jpg/_57756500_013619549-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57756000/jpg/_57756498_013619549-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Unilever workers to stage strikes</title>  
+      <description>Thousands of workers at Unilever are to stage a series of 24-hour strikes in a row over pensions, unions announce.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16455939</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16455939</guid>  
+      <pubDate>Sat, 07 Jan 2012 16:50:44 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57750000/jpg/_57750695_000143253-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57750000/jpg/_57750694_000143253-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>JD Sports looks set to buy Blacks</title>  
+      <description>JD Sports emerges as the likely buyer of struggling retailer Blacks Leisure, the 300-plus chain that employs 3,500 people.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16451803</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16451803</guid>  
+      <pubDate>Fri, 06 Jan 2012 21:13:59 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/56929000/jpg/_56929032_blacksleisureshopfront.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57728000/jpg/_57728926_57728925.jpg"/> 
+    </item>  
+    <item> 
+      <title>US economy creates 200,000 jobs</title>  
+      <description>The US economy created 200,000 jobs in December, while the unemployment rate fell to 8.5%, official figures show.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16445441</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16445441</guid>  
+      <pubDate>Fri, 06 Jan 2012 21:20:50 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/55125000/jpg/_55125506_012779307-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57745000/jpg/_57745669_013646446-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Hong Kong Air makes Airbus deal</title>  
+      <description>Hong Kong Airlines places order for 10 Airbus A380 aircraft worth about $3.8bn, easing concerns about an EU dispute with China.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16452171</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16452171</guid>  
+      <pubDate>Sat, 07 Jan 2012 00:51:54 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57746000/jpg/_57746711_cbmjtzg2.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57746000/jpg/_57746712_cbmjtzg2.jpg"/> 
+    </item>  
+    <item> 
+      <title>UK car sales 4.4% lower in 2011</title>  
+      <description>New car registrations in the UK fell 4.4% in 2011 to 1.94m, their lowest level in over a decade, new figures show.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16438925</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16438925</guid>  
+      <pubDate>Fri, 06 Jan 2012 11:09:47 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/50309000/jpg/_50309093_006956745-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/51518000/jpg/_51518836_smmtcarregistrationsfebruary.jpg"/> 
+    </item>  
+    <item> 
+      <title>Teaching unions shun pension deal</title>  
+      <description>The two largest teaching unions have called for further improvements in the government's plans to change the teachers' pension scheme.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16442607</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16442607</guid>  
+      <pubDate>Fri, 06 Jan 2012 15:37:41 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57737000/jpg/_57737873_013423052-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57730000/jpg/_57730455_013423052-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Hungary given third junk rating</title>  
+      <description>Fitch becomes the third ratings agency to cut Hungary's credit rating to junk status as deadlock with the IMF continues.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16446307</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16446307</guid>  
+      <pubDate>Fri, 06 Jan 2012 14:28:53 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57737000/jpg/_57737009_hungary.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57737000/jpg/_57737003_hungary.jpg"/> 
+    </item>  
+    <item> 
+      <title>Lender loses data of 1.4m people</title>  
+      <description>Customers of doorstep lenders have been receiving letters informing them that their personal details have been lost.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16443598</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16443598</guid>  
+      <pubDate>Fri, 06 Jan 2012 14:56:00 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57734000/jpg/_57734597_data.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57734000/jpg/_57734599_data.jpg"/> 
+    </item>  
+    <item> 
+      <title>NS&amp;I 'has fixed' website problems</title>  
+      <description>National Savings &amp; Investments says it believes it has fixed its faulty website, but will monitor it over the weekend.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16449746</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16449746</guid>  
+      <pubDate>Fri, 06 Jan 2012 20:01:53 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/56445000/jpg/_56445036_000643689-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/56445000/jpg/_56445034_000643689-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Euro unemployment stays at record</title>  
+      <description>Unemployment in the eurozone stayed at a record high as the impact of the sovereign debt crisis rumbled on, official figures show.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16441109</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16441109</guid>  
+      <pubDate>Fri, 06 Jan 2012 10:51:37 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57659000/jpg/_57659116_013615944-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57659000/jpg/_57659112_013615944-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>House prices 'fell 1.3% in 2011'</title>  
+      <description>House prices across the UK fell by an average of 1.3% in 2011, the Halifax mortgage lender says.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16438846</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16438846</guid>  
+      <pubDate>Fri, 06 Jan 2012 08:57:19 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57725000/jpg/_57725644_gettyestateagent14.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57725000/jpg/_57725642_gettyestateagent14.jpg"/> 
+    </item>  
+    <item> 
+      <title>PwC fined £1.4m in JP Morgan case</title>  
+      <description>Accountants PwC are fined £1.4m by regulators for failing to audit accurately the accounts of US bank, JP Morgan.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16435996</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16435996</guid>  
+      <pubDate>Fri, 06 Jan 2012 00:02:33 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57723000/jpg/_57723499_89064162.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57723000/jpg/_57723487_89064162.jpg"/> 
+    </item>  
+    <item> 
+      <title>Olympus ex-boss ends takeover bid</title>  
+      <description>The ousted boss of Olympus gives up on his attempts to regain control of the Japanese camera and medical equipment maker.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16436866</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16436866</guid>  
+      <pubDate>Fri, 06 Jan 2012 08:10:53 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57312000/jpg/_57312084_9xgmy2pd.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57702000/jpg/_57702085_fi8nasm6.jpg"/> 
+    </item>  
+    <item> 
+      <title>VW sells record 5.1m cars in 2011</title>  
+      <description>Volkswagen, Europe's biggest carmaker, says it sold a record 5.1 million cars worldwide last year.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16441778</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16441778</guid>  
+      <pubDate>Fri, 06 Jan 2012 11:51:33 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57545000/jpg/_57545928_v2w.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57545000/jpg/_57545784_v2w.jpg"/> 
+    </item>  
+    <item> 
+      <title>How will the euro crisis end?</title>  
+      <description>After European leaders' latest efforts to solve the debt crisis and prevent the implosion of the euro, what are the likely outcomes and how might they affect us?</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16098582</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16098582</guid>  
+      <pubDate>Fri, 09 Dec 2011 17:11:29 GMT</pubDate>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57215000/gif/_57215118_euro_scen_promo_144.gif"/> 
+    </item>  
+    <item> 
+      <title>What is Germany's vision for Europe?</title>  
+      <description>Ahead of a key European Union summit, Germany's Chancellor Angela Merkel sets out to remake the eurozone in her own image.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16030374</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16030374</guid>  
+      <pubDate>Thu, 08 Dec 2011 00:30:24 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57134000/jpg/_57134065_57128795.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57134000/jpg/_57134063_57128795.jpg"/> 
+    </item>  
+    <item> 
+      <title>Eurozone crisis: The possible resolutions</title>  
+      <description>A table of some of the possible scenarios facing European leaders trying to resolve the eurozone sovereign debt crisis.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-15582433</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-15582433</guid>  
+      <pubDate>Fri, 04 Nov 2011 16:22:26 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/56486000/jpg/_56486820_56483550.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/56483000/jpg/_56483553_56483550.jpg"/> 
+    </item>  
+    <item> 
+      <title>Eurozone crisis: European voices</title>  
+      <description>In a crucial week for the EU, we hear from readers inside and outside the eurozone on what they hope to see emerge from crunch talks on the future of the single currency.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-europe-16032410</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-europe-16032410</guid>  
+      <pubDate>Thu, 08 Dec 2011 00:07:21 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57152000/jpg/_57152246_lauren.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57212000/jpg/_57212412_lauren.jpg"/> 
+    </item>  
+    <item> 
+      <title>EU nations and the euro: What they want</title>  
+      <description>A guide to what the 27 members of the EU want from the December summit.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-europe-16036387</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-europe-16036387</guid>  
+      <pubDate>Thu, 08 Dec 2011 00:06:27 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57196000/jpg/_57196322_eu_eurozone_labelled_976.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57196000/jpg/_57196318_eu_eurozone_labelled_976.jpg"/> 
+    </item>  
+    <item> 
+      <title>Eurozone in crisis graphics - GDP</title>  
+      <description>Compare the fortunes of eurozone economies</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-13361934</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-13361934</guid>  
+      <pubDate>Thu, 12 May 2011 07:36:26 GMT</pubDate>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/52666000/jpg/_52666776_eurozone_promo_144x81_2.jpg"/> 
+    </item>  
+    <item> 
+      <title>Europe's four big dilemmas</title>  
+      <description>Europe's four big dilemmas</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-14934728</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-14934728</guid>  
+      <pubDate>Thu, 27 Oct 2011 10:04:21 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/55418000/jpg/_55418945_cointoss.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/55418000/jpg/_55418940_cointoss.jpg"/> 
+    </item>  
+    <item> 
+      <title>VIDEO: Why is Italy in trouble?</title>  
+      <description>Italy has had large debts for many years with no one questioning its ability to pay them back, until now.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-15594008</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-15594008</guid>  
+      <pubDate>Fri, 04 Nov 2011 16:11:47 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/56483000/jpg/_56483586_jex_1223694_de27-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/56483000/jpg/_56483588_jex_1223694_de27-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Omaha oracle to croon to Chinese</title>  
+      <description>Warren Buffett, the billionaire US investor, is set to sing to millions of Chinese internet users, state media claims.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16437224</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16437224</guid>  
+      <pubDate>Fri, 06 Jan 2012 08:16:37 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57578000/jpg/_57578652_013423058-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57578000/jpg/_57578647_013423058-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Singapore ministers face pay cuts</title>  
+      <description>Singapore's highly-paid ministers face pay cuts of up to 51% after a recommendation from a government-appointed committee.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-asia-16404935</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-asia-16404935</guid>  
+      <pubDate>Wed, 04 Jan 2012 08:16:21 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57682000/jpg/_57682745_001267177-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57682000/jpg/_57682743_001267177-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Shell closes its pension scheme</title>  
+      <description>Anglo-Dutch oil giant Royal Dutch Shell is to close its final-salary pension scheme to new employees in the UK.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16433547</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16433547</guid>  
+      <pubDate>Fri, 06 Jan 2012 08:53:39 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/49685000/jpg/_49685163_shell.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/49685000/jpg/_49685185_shell.jpg"/> 
+    </item>  
+    <item> 
+      <title>Pensions offer rejected by Unite</title>  
+      <description>Unite rejects the government's final offer on public sector pensions for NHS workers and warns strikes could continue into the Olympics.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16431284</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16431284</guid>  
+      <pubDate>Thu, 05 Jan 2012 20:25:28 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57717000/jpg/_57717605_strike.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57717000/jpg/_57717607_strike.jpg"/> 
+    </item>  
+    <item> 
+      <title>Mortgage rationing 'to get worse'</title>  
+      <description>Home buyers are likely to find it even harder to obtain a mortgage in the coming months, the Bank of England has revealed.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16425582</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16425582</guid>  
+      <pubDate>Thu, 05 Jan 2012 12:41:11 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57708000/jpg/_57708099_013251582-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57708000/jpg/_57708097_013251582-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Euro declines over banking fears</title>  
+      <description>The euro drops to its lowest rate against the dollar and pound in 16 months as concerns continue over the health of Europe's banks.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16424802</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16424802</guid>  
+      <pubDate>Thu, 05 Jan 2012 23:50:54 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57706000/jpg/_57706443_57706436.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57706000/jpg/_57706441_57706436.jpg"/> 
+    </item>  
+    <item> 
+      <title>Service sector growth 'buoyant'</title>  
+      <description>Activity in the UK service sector grew in December at its fastest rate since July, according to the purchasing managers' index.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16424145</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16424145</guid>  
+      <pubDate>Thu, 05 Jan 2012 12:50:11 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57703000/jpg/_57703566_barber_getty.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57703000/jpg/_57703564_barber_getty.jpg"/> 
+    </item>  
+    <item> 
+      <title>Hungary's forint falls to new low</title>  
+      <description>The Hungarian forint drops to a new record low against the euro as the country scales back a debt sale and continues talks over a bailout.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16426469</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16426469</guid>  
+      <pubDate>Thu, 05 Jan 2012 11:38:20 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/56929000/jpg/_56929207_013299110-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/56929000/jpg/_56929205_013299110-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Smartphones boost Samsung profits</title>  
+      <description>Samsung Electronics says it expects a big jump in profits for the final quarter of 2011, thanks to record smartphone sales.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16437118</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16437118</guid>  
+      <pubDate>Fri, 06 Jan 2012 02:59:22 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57723000/jpg/_57723950_013410086-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57723000/jpg/_57723948_013410086-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>HTC quarterly profits plunge 25%</title>  
+      <description>Quarterly profits at Taiwanese smartphone maker HTC fall 25% as its models struggle to compete with its rivals.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16437806</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16437806</guid>  
+      <pubDate>Fri, 06 Jan 2012 07:56:31 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/56380000/jpg/_56380101_012970028-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/56378000/jpg/_56378814_012970028-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Japan Airlines plans share sale</title>  
+      <description>Japan Airlines plans to relist its shares on the Tokyo Stock Exchange as the next step in its recovery from bankruptcy.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16436872</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16436872</guid>  
+      <pubDate>Fri, 06 Jan 2012 05:15:34 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57723000/jpg/_57723789_tokyostocks.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57723000/jpg/_57723842_tokyostocks.jpg"/> 
+    </item>  
+    <item> 
+      <title>Redknapp: An Englishman should manage England</title>  
+      <description>Harry Redknapp talks about motivating players who earn unthinkable sums, creating a global premier league, and how he would find it hard to turn down the England job</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16357044</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16357044</guid>  
+      <pubDate>Mon, 02 Jan 2012 01:23:34 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57612000/jpg/_57612373_harryredknapp.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57612000/jpg/_57612372_harryredknapp.jpg"/> 
+    </item>  
+    <item> 
+      <title>Betfair voids bets on horse race</title>  
+      <description>Betfair voids all bets made during a race at Leopardstown after an "obvious technical failure" left it liable for a multi-million pound payout.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16349786</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16349786</guid>  
+      <pubDate>Wed, 28 Dec 2011 19:05:10 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57598000/jpg/_57598753_013364405-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57598000/jpg/_57598751_013364405-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Cameroon pay strike compensation</title>  
+      <description>Cameroon's football federation pays $500,000 compensation to Algeria over the friendly match cancelled when the Indomitable Lions went on strike.</description>  
+      <link>http://news.bbc.co.uk/go/rss/int/news/-/sport1/hi/football/16315498.stm</link>  
+      <guid isPermaLink="false">http://news.bbc.co.uk/sport1/hi/football/16315498.stm</guid>  
+      <pubDate>Fri, 23 Dec 2011 11:35:07 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57547000/jpg/_57547213_cameroonvmorocco.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57547000/jpg/_57547214_cameroonvmorocco.jpg"/> 
+    </item>  
+    <item> 
+      <title>VIDEO: Your Money: New year money makeover</title>  
+      <description>In this week's Your Money, Declan Curry offers up a special programme with tips for a new year money makeover.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16454839</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16454839</guid>  
+      <pubDate>Sat, 07 Jan 2012 13:16:12 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/56503000/jpg/_56503890_jex_1088113_de27-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57247000/jpg/_57247822_jex_1088113_de27-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>AUDIO: Cameron: 'It is a difficult year'</title>  
+      <description>David Cameron has warned of another "testing year" ahead for households but said he hoped inflation would fall in the coming months to ease some of the pressure.</description>  
+      <link>http://news.bbc.co.uk/go/rss/int/news/-/today/hi/today/newsid_9672000/9672430.stm</link>  
+      <guid isPermaLink="false">http://news.bbc.co.uk/today/hi/today/newsid_9672000/9672430.stm</guid>  
+      <pubDate>Fri, 06 Jan 2012 09:54:30 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57727000/jpg/_57727825_013636045-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57727000/jpg/_57727826_013636045-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>VIDEO: Camembert makers in row over name</title>  
+      <description>Traditional cheese makers in France plan to take their industrial-scale competitors to court in a row over who can legally call their product Camembert of Normandy.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/world-europe-16437364</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/world-europe-16437364</guid>  
+      <pubDate>Fri, 06 Jan 2012 10:32:09 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57724000/jpg/_57724216_jex_1281164_de27-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57724000/jpg/_57724212_jex_1281164_de27-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>AUDIO: English apples rise in popularity</title>  
+      <description>Sales of English apples have risen by a fifth due to better investment in home-grown crops.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16443831</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16443831</guid>  
+      <pubDate>Fri, 06 Jan 2012 12:44:04 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57733000/jpg/_57733077_apples_bbc.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57733000/jpg/_57733080_apples_bbc.jpg"/> 
+    </item>  
+    <item> 
+      <title>AUDIO: Can tax avoidance be tackled?</title>  
+      <description>Graham Aaronson QC explains whether there is a realistic chance of the government legislating on the issue of tax avoidance.</description>  
+      <link>http://news.bbc.co.uk/go/rss/int/news/-/today/hi/today/newsid_9672000/9672340.stm</link>  
+      <guid isPermaLink="false">http://news.bbc.co.uk/today/hi/today/newsid_9672000/9672340.stm</guid>  
+      <pubDate>Fri, 06 Jan 2012 08:05:28 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57725000/jpg/_57725476_000238866-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57725000/jpg/_57725477_000238866-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>AUDIO: Locog ticket blunder 'a small issue'</title>  
+      <description>Andy Hunt, the chief executive of the British Olympic Association, says the fact that tickets for the synchronised swimming sessions were oversold is a "small issue" for Locog.</description>  
+      <link>http://news.bbc.co.uk/go/rss/int/news/-/today/hi/today/newsid_9672000/9672454.stm</link>  
+      <guid isPermaLink="false">http://news.bbc.co.uk/today/hi/today/newsid_9672000/9672454.stm</guid>  
+      <pubDate>Fri, 06 Jan 2012 11:25:47 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57729000/jpg/_57729062_005449297-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57729000/jpg/_57729063_005449297-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>VIDEO: Game on?</title>  
+      <description>The Republic of Ireland is trying to get a bigger slice of a $70bn global industry.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/uk-northern-ireland-16430279</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/uk-northern-ireland-16430279</guid>  
+      <pubDate>Thu, 05 Jan 2012 19:20:18 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57721000/jpg/_57721724_game2.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57721000/jpg/_57721722_game2.jpg"/> 
+    </item>  
+    <item> 
+      <title>AUDIO: A private sector 'lack of confidence'?</title>  
+      <description>Evan Davis reports from Manchester on whether the local private sector is growing enough to substitute for the shrinking public sector</description>  
+      <link>http://news.bbc.co.uk/go/rss/int/news/-/today/hi/today/newsid_9672000/9672326.stm</link>  
+      <guid isPermaLink="false">http://news.bbc.co.uk/today/hi/today/newsid_9672000/9672326.stm</guid>  
+      <pubDate>Fri, 06 Jan 2012 07:54:04 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57724000/jpg/_57724736_006219488-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57724000/jpg/_57724737_006219488-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Explaining the ways to complain</title>  
+      <description>How ombudsman services can help with your dispute</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-15782219</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-15782219</guid>  
+      <pubDate>Fri, 06 Jan 2012 00:13:01 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/56778000/jpg/_56778684_000025530-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/56778000/jpg/_56778686_000025530-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Toyota woos customers with safety</title>  
+      <description>Battered Toyota fights back with new safety features</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16427764</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16427764</guid>  
+      <pubDate>Fri, 06 Jan 2012 00:12:57 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57719000/jpg/_57719558_4.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57719000/jpg/_57719657_4.jpg"/> 
+    </item>  
+    <item> 
+      <title>Virtual shopper 'is the future'</title>  
+      <description>Predicting the end of doing the weekly shop</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16429321</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16429321</guid>  
+      <pubDate>Fri, 06 Jan 2012 00:12:53 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57720000/jpg/_57720494_129200290edit.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57718000/jpg/_57718694_129200290edit.jpg"/> 
+    </item>  
+    <item> 
+      <title>The financial costs of a divorce</title>  
+      <description>How to manage your finances during a divorce</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16410550</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16410550</guid>  
+      <pubDate>Thu, 05 Jan 2012 00:13:55 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57198000/jpg/_57198096_006344288-2.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57631000/jpg/_57631366_012754474-1.jpg"/> 
+    </item>  
+    <item> 
+      <title>Tips for new financial resolutions</title>  
+      <description>We ask people their tips for their finances</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16444530</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16444530</guid>  
+      <pubDate>Sat, 07 Jan 2012 00:35:38 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57742000/jpg/_57742569_fireworks.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57742000/jpg/_57742571_fireworks.jpg"/> 
+    </item>  
+    <item> 
+      <title>Motor industry adjusts to 'car usership'</title>  
+      <description>Why own a car when all you want is transport?</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16411558</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16411558</guid>  
+      <pubDate>Thu, 05 Jan 2012 00:13:48 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57697000/jpg/_57697106_dsc_0778.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57697000/jpg/_57697104_dsc_0778.jpg"/> 
+    </item>  
+    <item> 
+      <title>Investors eye resourceful Burma</title>  
+      <description>Burma offers wealth for both its people and for investors</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/business-16423553</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/business-16423553</guid>  
+      <pubDate>Thu, 05 Jan 2012 16:42:32 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57718000/jpg/_57718574_57710886.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57718000/jpg/_57718545_57710886.jpg"/> 
+    </item>  
+    <item> 
+      <title>The great confidence gap</title>  
+      <description>Why are business leaders bullish in bad times?</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/magazine-16422487</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/magazine-16422487</guid>  
+      <pubDate>Thu, 05 Jan 2012 12:28:14 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57709000/jpg/_57709118_blastocomp464.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57709000/jpg/_57709115_blastocomp464.jpg"/> 
+    </item> 
+  </channel> 
+
+</rss>

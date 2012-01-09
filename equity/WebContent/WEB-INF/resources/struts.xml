@@ -7,7 +7,7 @@
     <constant name="struts.custom.i18n.resources" value="global" />
     <constant name="struts.devMode" value="true" />
 	
-	<package name="common" namespace="/" extends="struts-default">
+	<package name="common" namespace="/common" extends="struts-default">
 	    <default-action-ref name="welcome" />
 		<action name="welcome" class="com.lionsardesai.action.WelcomeAction">
 			<result name="SUCCESS">/WEB-INF/pages/common/welcome2.jsp</result>
@@ -34,7 +34,7 @@
  -->
  	<package name="default" namespace="/" extends="struts-default">
  		<action name="locale" class="com.lionsardesai.common.LocaleAction">
-			<result type="redirect" name="SUCCESS">welcome.action</result>
+			<result type="redirect" name="SUCCESS">common/welcome.action</result>
 		</action>
 		<action name="getlogo">
 			<result>/WEB-INF/images/logo.png</result>

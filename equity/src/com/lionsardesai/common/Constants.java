@@ -43,13 +43,13 @@ public class Constants {
 	private final static String STC30 = "VZ";
 	private final static String STC31 = "WMT";
 	private final static String STC32 = "XOM";
-	// private final static String STC33 = "";
+	private final static String STC33 = "^IXIC";
 	// private final static String STC34 = "";
 	// private final static String STC35 = "";
 	public final static String[] listAll = { STC1, STC2, STC3, STC4, STC5,
 			STC6, STC7, STC8, STC9, STC10, STC11, STC12, STC13, STC14, STC15,
 			STC16, STC17, STC18, STC19, STC20, STC21, STC22, STC23, STC24,
-			STC25, STC26, STC27, STC28, STC29, STC30, STC31, STC32 };
+			STC25, STC26, STC27, STC28, STC29, STC30, STC31, STC32, STC33 };
 
 	// indicators
 	public final static String INDICATOR_ROC = "roc";

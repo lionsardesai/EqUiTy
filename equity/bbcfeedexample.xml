@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet title="XSL_formatting" type="text/xsl" href="/shared/bsp/xsl/rss/nolsol.xsl"?>
+
+<rss xmlns:media="http://search.yahoo.com/mrss/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">  
+  <channel> 
+    <title></title>  
+    <link></link>  
+    <description></description>  
+    <language></language>  
+    <lastBuildDate></lastBuildDate>  
+    <copyright></copyright>  
+    <image> 
+      <url></url>  
+      <title></title>  
+      <link></link>  
+      <width>120</width>  
+      <height>60</height> 
+    </image>  
+    <ttl>15</ttl>  
+    <atom:link href="http://feeds.bbci.co.uk/news/business/rss.xml" rel="self" type="application/rss+xml"/>  
+    <item> 
+      <title>Cameron targets 'excessive pay'</title>  
+      <description>David Cameron signals his intent to give shareholders binding votes on executive pay, as part of measures to deal with excessive salaries.</description>  
+      <link>http://www.bbc.co.uk/go/rss/int/news/-/news/uk-16458570</link>  
+      <guid isPermaLink="false">http://www.bbc.co.uk/news/uk-16458570</guid>  
+      <pubDate>Sun, 08 Jan 2012 01:38:39 GMT</pubDate>  
+      <media:thumbnail width="66" height="49" url="http://news.bbcimg.co.uk/media/images/57756000/jpg/_57756500_013619549-1.jpg"/>  
+      <media:thumbnail width="144" height="81" url="http://news.bbcimg.co.uk/media/images/57756000/jpg/_57756498_013619549-1.jpg"/> 
+    </item>  
+  </channel> 
+
+</rss>

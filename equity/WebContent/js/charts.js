@@ -15,11 +15,31 @@ function init(lines){
 	context.stroke();
 	context.endPath();
 };
+
+function drawVolume(data, scale, context) {
+//	var canvas = document.getElementById("canvasfirst");
+	//var context = canvas.getContext("2d");
+	
+	context.moveTo(-0.5,0.5);
+	context.strokeStyle = "rgba(0,0,255,1)";
+	context.lineWidth = 2.0;
+	context.lineCap = "round";
+	//context.stroke();
+	context.beginPath();
+	context.closePath();
+	for(var i=0;i<data.length;i++){
+		context.moveTo(i*(600/scale),300);
+		context.lineTo(i*(600/scale),300-data[i]);
+		context.stroke();
+	}
+	//context.stroke();
+}
+
 function alternategraph(data, scale){
 	var canvas = document.getElementById("canvassecond");
 	var context = canvas.getContext("2d");
 	context.strokeStyle = "rgba(92,156,204,1)";
-	context.lineWidth = 1;
+	context.lineWidth = 1.0;
 	context.moveTo(10,10);
 	context.beginPath();
 	for(var i=0;i<data.length;i++) {
@@ -30,7 +50,7 @@ function alternategraph(data, scale){
 	context.moveTo(0,0);
 	context.strokeRect(0,0,600,50);
 	context.stroke();
-	//context.endPath();
+	context.closePath();
 	context.fillText("tech analysis",620,25);
 	context.fillText("graphs",620,15);
 
@@ -39,68 +59,50 @@ function drawLine(oldx, oldy, y, scale){
 	var canvas = document.getElementById("canvassecond");
 	var context = canvas.getContext("2d");
 	context.strokeStyle = "rgb(255,0,0)";
-	context.lineWidth = 1;
+	context.lineWidth = 1.0;
 	context.beginPath();
 	context.moveTo((780/scale)*oldx,(550-oldy));
 	context.lineTo((780/scale)*(oldx+1),(550-y));
 	context.stroke();
-	context.endPath();
+	context.closePath();
 }
-function drawLine2(listclose, scale){
+function drawLine2(listclose, volume, scale){
 	var canvas = document.getElementById("canvasfirst");
 	var context = canvas.getContext("2d");
 	
-	//cross-hairs
+	// attempts to correct line width probs
+	context.translate(context.canvas.width/2, context.canvas.height/2);
+	context.scale(1, 1);
+	context.translate(-context.canvas.width/2, -context.canvas.height/2);
 	
-	context.strokeStyle = "rgba(92,156,204,1)";
-	context.lineWidth = 1;
+	context.strokeStyle = "rgba(100,156,255,1)";
+	context.lineWidth = 1.0;
 	context.moveTo(-0.5,0.5);
+	
+	// fill extremes
 	context.fillText("lowest close", 620, 275);
 	context.fillText("highest close", 620, 25);
 	
-//	context.moveTo(50,0);
-//	context.lineTo(50,300);
-//	context.stroke();
-	
+	//cross-hairs
 	context.moveTo(100,0);
 	context.lineTo(100,300);
 	context.stroke();
-	
-//	context.moveTo(150,0);
-//	context.lineTo(150,300);
-//	context.stroke();
 	
 	context.moveTo(200,0);
 	context.lineTo(200,300);
 	context.stroke();
 	
-//	context.moveTo(250,0);
-//	context.lineTo(250,300);
-//	context.stroke();
-	
 	context.moveTo(300,0);
 	context.lineTo(300,300);
 	context.stroke();
-	
-//	context.moveTo(350,0);
-//	context.lineTo(350,300);
-//	context.stroke();
 	
 	context.moveTo(400,0);
 	context.lineTo(400,300);
 	context.stroke();
 	
-//	context.moveTo(450,0);
-//	context.lineTo(450,300);
-//	context.stroke();
-	
 	context.moveTo(500,0);
 	context.lineTo(500,300);
 	context.stroke();
-	
-//	context.moveTo(550,0);
-//	context.lineTo(550,300);
-//	context.stroke();
 	
 	context.moveTo(0,50);
 	context.lineTo(600,50);
@@ -131,10 +133,11 @@ function drawLine2(listclose, scale){
 	context.lineTo(600,300-listclose[listclose.length-1]);
 	context.lineTo(600,300);
 	context.lineTo(0,300);
+	context.stroke();
 	context.fillStyle = "rgba(92,156,204,0.7)";
 	context.fill();
-	context.stroke();
-	context.endPath();
+	context.closePath();
+	drawVolume(volume, scale, context);
 		
 }
 function drawCandle(high, low, open, close, scale){

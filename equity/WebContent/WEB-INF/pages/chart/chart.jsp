@@ -29,17 +29,33 @@
 		            
 		        }
 		        
+		        var right_div= document.getElementById("right_navi_lower_contents");
+		        for(i=0;i<5;i++) {
+		        	right_div.innerHTML += "<div id= \"right_navi_lower_newsitem_"
+		        	+i+"\">"+data2.rss.channel[0].item[i].description+"</div>";
+		        }
+		        
 				// Tabs
 				var $tabs=$('#tabs').tabs();
 				$tabs.tabs('select',1);
 				
 				$('#news').rollchildren({  
-	                delay_time : 3000,  
+	                delay_time : 5000,  
 	                loop : true,  
 	                pause_on_mouseover : true,  
 	                roll_up_old_item : true,  
-	                speed: 'slow'   
-	          });
+	                speed: 'fast',
+	                height : 0
+	            });
+				
+				$('#right_navi_lower_contents').rollchildren({  
+	                delay_time : 10000,  
+	                loop : true,  
+	                pause_on_mouseover : true,  
+	                roll_up_old_item : true,  
+	                speed: 'fast',
+	                height : 0
+	            });
 	
 			});
 </script>
@@ -65,7 +81,7 @@
 <!-- end common images div -->
 </div>
 <div id="ticker">tickers</div>
-<div id="news"></div>
+<div id="news" class="ui-corner-all"></div>
 <!-- end common header here -->
 </div>
 <div class="lowerbody">
@@ -82,7 +98,7 @@
 			<s:text name="test.lorem1" />
 </div>
 <div id="tabs-2">
-<canvas id="canvasfirst" width="700" height="300">
+<canvas id="canvasfirst" width="701" height="301">
 <s:text name="unsupported.error" />
 </canvas>
 <s:if test="%{techChart!=null}">
@@ -113,6 +129,11 @@ id entered : <s:property value="model.id"/>
 <!-- end main display area -->
 </div>
 <div id="right_menu" class="ui-corner-all ui-widget-content">
+<div id="right_upper">
+<div id="right_navi_upper_header" class="ui-widget-header ui-corner-all" style="height:27px; margin:3px 3px 0px 3px; line-height:30px">
+Right Navi
+</div>
+<DIV id="right_navi_upper_contents">
 <UL>
 	<LI>Lorem ipsum
 		<ul>
@@ -146,7 +167,7 @@ id entered : <s:property value="model.id"/>
 </UL>
 <s:if test="%{chartType=='line'}">
 <script>
-drawLine2(<s:property value="closeList"/>,<s:property value="size" />);
+drawLine2(<s:property value="closeList"/>,<s:property value="volumeList"/>,<s:property value="size" />);
 </script>
 </s:if>
 <s:elseif test="%{chartType=='candle'}">
@@ -154,6 +175,19 @@ drawLine2(<s:property value="closeList"/>,<s:property value="size" />);
 drawCandle(<s:property value ="highList"/>,<s:property value ="lowList" />,<s:property value ="openList" />,<s:property value="closeList" />,<s:property value = "size" />);
 </script>
 </s:elseif>
+<!-- close right navi upper contents div -->
+</DIV>
+<!-- close right_upper -->
+</div>
+<div id="right_lower">
+<div id="right_navi_lower_header" class="ui-widget-header ui-corner-all" style="height:27px; margin:3px 3px 0px 3px; line-height:30px">
+This Just In
+</div>
+<DIV id="right_navi_lower_contents" style="margin:3px 3px 0px 3px">
+</DIV>
+<!-- close right_lower -->
+</div>
+<!-- close righ navi -->
 </div>
 <!-- close lower body tab -->
 </div>
