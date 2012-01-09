@@ -116,7 +116,7 @@ alternategraph(<s:property value="techData"/>,<s:property value="size" />);
 <tr><td>
 	<s:select list="model.listAll" name="id"></s:select></td><td>
 	<s:submit type="button" label="refresh"></s:submit></td></tr><tr><td>
-	<s:radio name="techChart" label="Technical Analysis" list="{'roc','mfi', 'rsi', 'macd', 'stoc', 'ad' }" /></td><td></td></tr><tr><td>
+	<s:radio name="techChart" label="Technical Analysis" list="{'roc','mfi', 'rsi', 'macd', 'stoc', 'ad', 'ema' }" /></td><td></td></tr><tr><td>
 	<s:radio name="chartType" label="Graph Type" list="{'bar', 'candle', 'line'}" /></td><td></td></tr>
 </table>
 </s:form>

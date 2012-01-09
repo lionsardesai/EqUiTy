@@ -55,10 +55,10 @@ public class Constants {
 	public final static String INDICATOR_ROC = "roc";
 	public final static String INDICATOR_MFI = "mfi";
 	public final static String INDICATOR_MACD = "macd";
-	public final static String INDICATOR_AD = "ad";
+	public final static String INDICATOR_ADL = "adl";
 	public final static String INDICATOR_STOC = "stoc";
 	public final static String INDICATOR_RSI = "rsi";
-	public final static String INDICATOR_7 = "roc";
+	public final static String INDICATOR_EMA = "ema";
 	public final static String INDICATOR_8 = "roc";
 
 	// in-house predictors
