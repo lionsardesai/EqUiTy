@@ -25,13 +25,13 @@
 			<result name="SUCCESS">/WEB-INF/pages/chart/chart.jsp</result>
 		</action>
 	</package>
-<!-- 	
+
 	<package name="predictor" namespace="/predictor" extends="struts-default">
 		<action name="chart" class="com.lionsardesai.action.PredictorAction">
 			<result name="SUCCESS">/WEB-INF/pages/predictor/predictor.jsp</result>
 		</action>
 	</package>
- -->
+
  	<package name="default" namespace="/" extends="struts-default">
  		<action name="locale" class="com.lionsardesai.common.LocaleAction">
 			<result type="redirect" name="SUCCESS">common/welcome.action</result>

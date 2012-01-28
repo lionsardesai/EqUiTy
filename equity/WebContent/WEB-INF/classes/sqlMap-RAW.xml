@@ -26,6 +26,9 @@ PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
 <select id="getRecords" resultMap="record">
    select date, id, open, close, high, low, volume, adjClose from RAW where id=#id# and date>DATE_SUB(CURDATE(),INTERVAL 3 MONTH);
 </select>
+<select id="getPredictorData" resultMap="record">
+   select date, id, open, close, high, low, volume, adjClose from RAW where id=#id# and date>DATE_SUB(CURDATE(),INTERVAL 1 YEAR);
+</select>
 <insert id="storetest" parameterClass="com.lionsardesai.beans.FakeBean">
 	insert into RAW(id, open, close) values(#id#, #open#, #close#)
 </insert>

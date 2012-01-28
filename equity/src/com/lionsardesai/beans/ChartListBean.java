@@ -23,11 +23,11 @@ public class ChartListBean implements Serializable {
 	private static final long serialVersionUID = 8353816144236299966L;
 
 	/** line type of graph @see */
-	private static final String CHART_TYPE_LINE = "line";
+	public static final String CHART_TYPE_LINE = "line";
 	/** candle type of graph */
-	private static final String CHART_TYPE_CANDLE = "candle";
+	public static final String CHART_TYPE_CANDLE = "candle";
 	/** bar type of graph */
-	private static final String CHART_TYPE_BAR = "bar";
+	public static final String CHART_TYPE_BAR = "bar";
 
 	private static final Logger logger = Logger.getLogger(ChartListBean.class
 			.getSimpleName());
@@ -50,9 +50,7 @@ public class ChartListBean implements Serializable {
 	String techChart = null;
 	List<String> techData = new ArrayList<String>();
 
-	// TODO remove unused max/min variables
-	// FIXME make max/min variables local so that chartlistbean is lighter
-	// TODO replace by range of close/open/high/low
+	// TODO use max and min in logic and only keep one max min for final data
 	// variables for chart display starting from here
 	public float closeMax;
 	public float closeMin;
@@ -91,7 +89,7 @@ public class ChartListBean implements Serializable {
 	 */
 	public void setNewData(List<RAWDataBean> newData) {
 		this.newData = newData;
-		this.size = newData.size();
+		size = newData.size();
 	}
 
 	/**
