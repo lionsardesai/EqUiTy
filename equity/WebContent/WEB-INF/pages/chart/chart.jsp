@@ -21,6 +21,9 @@
 <script src="../js/jQuery.rollChildren.js"></script>  
 <script type="text/javascript">
 			$(function(){
+				
+				$("#button").button();
+				$("#radioset").buttonset();
 
 				var main_div = document.getElementById("news");
 		        for(i=0;i < data1.rss.channel[0].item.length && i<data2.rss.channel[0].item.length;i++) {
@@ -76,11 +79,11 @@
 </div>
 <s:url id="bannerurl" namespace="/" action="getbanner" />
 <div class="headerimages">
-<div id="logo" style="font-size:25"><!-- <img src="${logourl}" width="" height="" /> --> LOGO </div>
+<div id="logo" style="font-size:25"><img src="${logourl}" width="" height="88" /> </div>
 <div id="banner" style="font-size:25"><!-- <img src="${bannerurl}" width=95% height=100% /> --> Banners </div>
 <!-- end common images div -->
 </div>
-<div id="ticker">tickers</div>
+<div id="ticker" class="ui-corner-all"><!--<s:property value="model.tickerString" />-->ticker</div>
 <div id="news" class="ui-corner-all"></div>
 <!-- end common header here -->
 </div>
@@ -95,7 +98,11 @@
 			</ul>
 			<s:text name="test.common"></s:text>
 			<div id="tabs-1"><s:text name="welcome.text" /><br/>
-			<s:text name="test.lorem1" />
+			<!-- div to seperate tab1 and the description on left and right side of same line -->
+			<canvas id="canvastab1" width="70" height="30">
+				<s:text name="unsupported.error" />
+			</canvas>
+			<s:text name="chart.tab1.hotnews" />
 </div>
 <div id="tabs-2">
 <canvas id="canvasfirst" width="701" height="301">
@@ -111,19 +118,26 @@ alternategraph(<s:property value="techData"/>,<s:property value="size" />);
 </SCRIPT>
 </s:if>
 <s:form action="chart.action">
-<table>
-<tr><s:actionerror /></tr>
-<tr><td>
-	<s:select list="model.listAll" name="id"></s:select></td><td>
-	<s:submit type="button" label="refresh"></s:submit></td></tr><tr><td>
-	<s:radio name="techChart" label="Technical Analysis" list="{'roc','mfi', 'rsi', 'macd', 'stoc', 'ad', 'ema' }" /></td><td></td></tr><tr><td>
-	<s:radio name="chartType" label="Graph Type" list="{'bar', 'candle', 'line'}" /></td><td></td></tr>
-</table>
+<s:actionerror />
+	<s:select list="model.listAll" name="id" /><s:radio name="chartType" label="Graph Type" list="{'bar', 'candle', 'line'}" />
+	<s:submit type="button" id = "button" label="refresh" />
+	<s:radio id="radioset" name="techChart" label="Technical Analysis" list="{'roc','mfi', 'rsi', 'macd', 'stoc', 'ad', 'ema' }" />
 </s:form>
-id entered : <s:property value="model.id"/>
+<s:text name="chart.tab2.about" /><s:property value="model.id"/>
+<s:text name="chart.tab2.news.about" /><s:property value="model.id" />
 </div>
-<div id="tabs-3"><s:text name="test.lorem2" /></div>
-<div id="tabs-4"><s:text name="test.lorem3" /></div>
+<div id="tabs-3"><s:text name="chart.tab3.title" />
+<s:text name="chart.tab3.description"></s:text>
+<!-- split into left and right divs maybe for text on right side -->
+<canvas id="canvasfirst" width="501" height="201">
+<s:text name="unsupported.error" />
+</canvas><!-- close tab-3 --></div>
+<div id="tabs-4"><s:text name="chart.tab4.title" />
+<s:text name="chart.tab4.description"></s:text>
+<!-- split into left and right divs maybe for text on right side -->
+<canvas id="canvasfirst" width="701" height="401">
+<s:text name="unsupported.error" />
+</canvas><!-- end tab-4 --></div>
 <!-- end tabs -->
 </div>
 <!-- end main display area -->

@@ -40,7 +40,7 @@ public class ChartAction extends BaseAction<ChartListBean> {
 			chartlogic.init();
 			getModel().setNewData(chartlogic.getRecords(getModel()));
 			chartlogic.evaluate(getModel());
-
+			getModel().setTickerString(chartlogic.getTicker());
 		} catch (NullPointerException e) {
 			// TODO Redirect to error page using error action
 			logger.error("NULL pointer caught");

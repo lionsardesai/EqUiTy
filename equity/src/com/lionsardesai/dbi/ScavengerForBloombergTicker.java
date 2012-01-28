@@ -1,7 +1,7 @@
 /**
  * 
  */
-package test;
+package com.lionsardesai.dbi;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,12 +16,13 @@ import java.util.regex.Pattern;
  * @author shardul
  * 
  */
-public class Scour {
+public class ScavengerForBloombergTicker {
 
+	// TODO logging and exception handling
 	/**
-	 * @param args
+	 * @return ticker from bloomberg site
 	 */
-	public static void main(String[] args) {
+	public static String scavenge() {
 
 		try {
 			URL url = new URL("http://www.bloomberg.com/");
@@ -29,6 +30,7 @@ public class Scour {
 			BufferedReader dis = new BufferedReader(new InputStreamReader(
 					urlConnection.getInputStream()));
 			String html = "", tmp = "";
+			StringBuffer ret = new StringBuffer();
 			// read all HTML source from given URL
 			while ((tmp = dis.readLine()) != null) {
 				html += " " + tmp;
@@ -46,7 +48,9 @@ public class Scour {
 			while (m.find() == true) {
 				// Print the first matched pattern
 				System.out.println(m.group(1));
+				ret.append(m.group(1));
 			}
+			return ret.toString();
 		} catch (MalformedURLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -54,5 +58,6 @@ public class Scour {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		return null;
 	}
 }

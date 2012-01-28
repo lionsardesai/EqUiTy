@@ -32,6 +32,8 @@ public class ChartListBean implements Serializable {
 	private static final Logger logger = Logger.getLogger(ChartListBean.class
 			.getSimpleName());
 
+	public String tickerString = null;
+
 	public String id = Constants.listAll[4];
 	public List<RAWDataBean> newData = new ArrayList<RAWDataBean>();
 	public String[] listAll = Constants.listAll;
@@ -397,6 +399,21 @@ public class ChartListBean implements Serializable {
 	 */
 	public void setVolumeMin(float volumeMin) {
 		this.volumeMin = volumeMin;
+	}
+
+	/**
+	 * @return the tickerString
+	 */
+	public String getTickerString() {
+		return tickerString;
+	}
+
+	/**
+	 * @param tickerString
+	 *            the tickerString to set
+	 */
+	public void setTickerString(String tickerString) {
+		this.tickerString = tickerString;
 	}
 
 }

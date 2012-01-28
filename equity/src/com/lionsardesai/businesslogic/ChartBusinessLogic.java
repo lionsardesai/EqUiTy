@@ -22,4 +22,6 @@ public abstract class ChartBusinessLogic {
 
 	public abstract void evaluate(ChartListBean model);
 
+	public abstract String getTicker();
+
 }
